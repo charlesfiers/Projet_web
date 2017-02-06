@@ -9,7 +9,7 @@
 }
 
 .blockheader #bandeau h2:hover{
-	box-shadow: 0pt 0pt 6pt black;
+	box-shadow: 0pt 0pt 6pt blue;
 	transition: box-shadow 0.4s;
 }
 
