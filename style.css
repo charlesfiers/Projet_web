@@ -1,18 +1,25 @@
 #logo{
-	width:90%;
+	width:120%;
 	display:block;
 }
 
 .blockheader #bandeau{
 	text-align: center;
+	transition: opacity 0.7s;
+}
+
+.blockheader #bandeau h2:hover{
+	box-shadow: 0pt 0pt 6pt black;
+	transition: box-shadow 0.4s;
 }
 
 .blockheader #bouton{
 	visibility: visible;
+	opacity: 1;
 	width:90%;
 }
 
 
-.m-fadeOut{
-	visibility: hidden;
+.animbando{
+	opacity: 0;
 }
