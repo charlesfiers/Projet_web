@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	require 'libs/flight/Flight.php';
     <title>Halle au Frais</title>
     <meta charset='utf-8' />
     <link rel="stylesheet" type="text/css" href="normalize.css" /><!--Reset css-->
