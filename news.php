@@ -1,8 +1,10 @@
 <?php
-public function callArticles($file)
+function callArticles($file)
 {
 	include($file);
-	
+	foreach ($articles as $key => $value) {
+		echo"$key";
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ public function callArticles($file)
 	<div class="grid grid-pad">
 	<?php include("header.php");?>
 	<main>
-		
+		<?phpcallArticles('article.php');?>
 	</main>
 	</div>
 </body>
