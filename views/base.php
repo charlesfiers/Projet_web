@@ -9,58 +9,14 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div class="grid grid-pad">
-	<header class="blockheader">
-        <div class="grid grid-pad">
-        <div class="col-1-12">
-        	<img src="Medias/Logo_HAF.jpg" id="logo">
-        </div>
-        <div class="col-3-12">
-            
-        </div>
-        <div id="bandeau" class="animbando">
-                <div class="col-3-12">
-                        <div class="menu">
-                	<h2 >Infos</h2>
-                        </div>
-                </div>
-                <div class="col-3-12">
-                        <div class="menu">
-                        <h2 >News</h2>
-                </div>
-        </div>
-        </div>
-        <div class="col-1-12">
-            
-        </div>
-        <div class="col-1-12">
-                <img src="Medias/bouton.jpg" id="bouton">
-        </div>
-</div>
-</header>
-
-
+    <?php include("header.php");?>
 	<main>
-            <?php foreach ($articles as $art) {
-                echo $art->titre;
-                echo $art->contenu;
-            };
-            ?>
+        <?php echo $main_content; ?>
 	</main>
 	<footer>
 		
 	</footer>
 </div>
 
-<script>
-var bouton = document.getElementById("bouton");
-var menu1 = document.getElementById("bandeau");
-
-bouton.addEventListener("click", function() {
-  
-  menu1.classList.toggle("animbando");
-  
-});
-</script>
 </body>
 </html>

@@ -9,12 +9,12 @@
         <div id="bandeau" class="animbando">
                 <div class="col-3-12">
                         <div class="menu">
-                	<h2 >Infos</h2>
+                	<a href="/"><h2>Infos</h2></a>
                         </div>
                 </div>
                 <div class="col-3-12">
                         <div class="menu">
-                        <h2 >News</h2>
+                        <a href="<?php echo BASE_URI; ?>actualites"><h2>News</h2></a>
                 </div>
         </div>
         </div>
@@ -26,7 +26,6 @@
         </div>
 </div>
 </header>
-
 
 <script>
 var bouton = document.getElementById("bouton");
