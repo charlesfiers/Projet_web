@@ -10,7 +10,7 @@
 </head>
 <body>
 <!--REFONTE DU HEADER-->
-<header class="blockheader">
+<header id="header_background" class="blockheader">
     <div class="grid grid-pad">
 
         <div class="grid grid-pad">
@@ -21,6 +21,10 @@
                 <nav id="bandeau" class="animbando">
                     <ul>
                         <li>Infos</li>
+                        <li>News</li>
+                        <li>News</li>
+                        <li>News</li>
+                        <li>News</li>
                         <li>News</li>
                     </ul>
                 </nav>
@@ -49,10 +53,12 @@
 <script>
     var bouton = document.getElementById("bouton");
     var menu1 = document.getElementById("bandeau");
+    var background = document.getElementById("header_background");
 
     bouton.addEventListener("click", function() {
 
       menu1.classList.toggle("animbando");
+      background.classList.toggle("blockheader_color");
 
   });
 </script>
