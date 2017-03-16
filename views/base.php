@@ -13,7 +13,7 @@
 	<header class="blockheader">
         <div class="grid grid-pad">
         <div class="col-1-12">
-        	<img src="Medias/Logo_HAF.jpg" id="logo">
+        	<img src="Medias/logoHaF.png" id="logo"> <!--changement de logo-->
         </div>
         <div class="col-3-12">
             
@@ -34,7 +34,7 @@
             
         </div>
         <div class="col-1-12">
-                <img src="Medias/bouton.jpg" id="bouton">
+                <img src="Medias/square.png" id="bouton">
         </div>
 </div>
 </header>
