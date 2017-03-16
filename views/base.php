@@ -41,7 +41,11 @@
 
 
 	<main>
-
+            <?php foreach ($articles as $art) {
+                echo $art->titre;
+                echo $art->contenu;
+            };
+            ?>
 	</main>
 	<footer>
 		
