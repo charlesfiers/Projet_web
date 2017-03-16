@@ -16,7 +16,8 @@
 .blockheader #bouton{
 	visibility: visible;
 	opacity: 1;
-	width:90%;
+	margin-top: 30px;
+	width: 60%;
 }
 
 
