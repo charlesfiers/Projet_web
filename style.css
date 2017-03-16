@@ -23,4 +23,12 @@
 
 .animbando{
 	opacity: 0;
+
+}
+#navbar ul{
+	list-style-type: none;
+}
+#navbar ul li{
+	display: inline-block;
+    width: 60px;
 }
