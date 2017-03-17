@@ -1,0 +1,3 @@
+<footer>
+	salut
+</footer>

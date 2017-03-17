@@ -13,8 +13,6 @@
 	<main>
         <?php echo $main_content; ?>
 	</main>
-	<footer>
-		
-	</footer>
+	<?php include("footer.php");?>
 </body>
 </html>
