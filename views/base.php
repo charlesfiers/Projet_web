@@ -11,8 +11,12 @@
 <body>
     <?php include("header.php");?>
 	<main>
-        <?php echo $main_content; ?>
+        <?php if (isset($main_content)) {
+        echo $main_content;
+    } ?>
 	</main>
-	<?php include("footer.php");?>
+    <?php if (isset($footer)) {
+        include("footer.php");
+    } ?>
 </body>
 </html>

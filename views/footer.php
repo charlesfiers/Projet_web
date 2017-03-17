@@ -1,21 +1,33 @@
 <footer>
 	<body onload="plus()">
-
-<DIV ID="zone_bannieres" align="center"></DIV>
+<div id="fond"></div>
+<DIV ID="banniere"></DIV>
 
 </body>
 
 	<script language="javascript">
 	function plus()
-	{code_html = '<a href="'+liens[chiffre]+'" target="_blank"><img border="0" src="'+pictures[chiffre]+'"></a>';
-	document.getElementById("zone_bannieres").innerHTML = code_html;
+	{
 		if(chiffre == longueur)
     	    { chiffre = 0; }
     	    else
     	    { chiffre++; }
 	changement = 1;
+	switch(chiffre) {
+    case 0:
+        code_html = '<a href="'+liens[chiffre+2]+'"><img src="'+pictures[chiffre+2]+'" class ="mini"></a><a href="'+liens[chiffre]+'"><img src="'+pictures[chiffre]+'" class ="maxi"></a><a href="'+liens[chiffre+1]+'"><img src="'+pictures[chiffre+1]+'" class ="mini"></a>';
+        break;
+    case 1:
+        code_html = '<a href="'+liens[chiffre-1]+'"><img src="'+pictures[chiffre-1]+'" class ="mini"></a><a href="'+liens[chiffre]+'"><img src="'+pictures[chiffre]+'" class ="maxi"></a><a href="'+liens[chiffre+1]+'"><img src="'+pictures[chiffre+1]+'" class ="mini"></a>';
+        break;
+    case 2:
+        code_html = '<a href="'+liens[chiffre-1]+'"><img src="'+pictures[chiffre-1]+'" class ="mini"></a><a href="'+liens[chiffre]+'"><img src="'+pictures[chiffre]+'" class ="maxi"></a><a href="'+liens[chiffre-2]+'"><img src="'+pictures[chiffre-2]+'" class ="mini"></a>';
+}
+	code_html2 = '<img src="'+pictures[chiffre]+'">';
 	//durée d'affichage d'une bannière en secondes
-	window.setTimeout("plus()", (changement*20000));}
+	window.setTimeout("plus()", (changement*4000));
+	document.getElementById("fond").innerHTML = code_html2;
+	document.getElementById("banniere").innerHTML = code_html;}
 
 	pictures = new Array()
 	pictures[0] = '<?php echo BASE_URI; ?>Medias/icone1.png';

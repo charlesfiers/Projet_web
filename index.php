@@ -10,7 +10,7 @@ ORM::configure('sqlite:Data/bidon.sqlite');
 require 'libs/flight/flight/Flight.php';
 
 function hello(){
-	Flight::render('base', array('title' => 'Halle au Frais', 'main_content' => 'PAGE ACCUEIL'));
+	Flight::render('base', array('title' => 'Halle au Frais', 'footer' => 'yes'));
 
 }
 
