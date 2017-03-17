@@ -1,6 +1,6 @@
 <?php 
 
-define('BASE_URI', 'http://127.0.0.1:8080/edsa-PROJETTUT/'); // attention ne correspond qu'à la machine locale
+define('BASE_URI', 'http://localhost/Projet/Projet_web/'); // attention ne correspond qu'à la machine locale
 
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
