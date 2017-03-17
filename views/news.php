@@ -1,8 +1,6 @@
-
+<div class="grid grid-pad">
 <?php foreach ($articles as $art) :?>
 
-
-    <div class="grid grid-pad">
          <div class="col-1-2">
              <article>
                 <h3><?php echo $art->titre;?></h3>
@@ -16,6 +14,6 @@
                 </div>
             </article>
         </div>
-    </div>
 
 <?php endforeach;?>
+</div>
