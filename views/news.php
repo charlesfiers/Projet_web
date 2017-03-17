@@ -4,11 +4,16 @@
 
     <div class="grid grid-pad">
          <div class="col-1-2">
-             <article class="content">
+             <article>
                 <h3><?php echo $art->titre;?></h3>
-                <img src="<?php echo $art->image; ?>">
                 <div class="description"><?php echo $art->description;?></div>
-                <?php echo $art->contenu;?>
+                <img src="<?php echo $art->image; ?>">
+                <div class="legend">
+                    <?php echo $art->légende;?>
+                </div>
+                <div class = "contenu">
+                    <?php echo $art->contenu;?>
+                </div>
             </article>
         </div>
     </div>
