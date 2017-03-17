@@ -1,6 +1,7 @@
 #logo{
 	width:120%;
 	display:block;
+	box-shadow: 0pt 0pt 6pt white;
 }
 
 /*Gestion de l'appparition du background coloré*/
@@ -68,4 +69,27 @@
 	padding: 0;
 	margin:0;
 	height: 86px;
+}
+
+article .contenu{
+	text-align: justify;
+}
+
+article img{
+	display:block;
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+article .description{
+	font-style: italic;
+	color: grey;
+}
+
+article .legend{
+	font-style: italic;
+	color: grey;
+	font-size: 0.8em;
+	text-align: right;
 }
