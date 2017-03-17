@@ -9,17 +9,12 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<?php include('./views/header.php');?>
-
-
-<main>
-
-</main>
-<footer>
-
-</footer>
-</div>
-
-
+    <?php include("header.php");?>
+	<main>
+        <?php echo $main_content; ?>
+	</main>
+	<footer>
+		
+	</footer>
 </body>
 </html>

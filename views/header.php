@@ -9,8 +9,8 @@
             <div class="col-10-12">
                 <nav id="bandeau" class="animbando">
                     <ul>
-                        <li>Infos</li>
-                        <li>News</li>
+                        <li><a href="http://127.0.0.1:8080/edsa-PROJETTUT/">Infos</a></li> <!--Attention correspond qu'à la machine locale à modifier-->
+                        <li> <a href="<?php echo BASE_URI; ?>actualites">News</a></li>
                         <li>News</li>
                         <li>News</li>
                         <li>News</li>
@@ -25,7 +25,6 @@
     </div>
 </header>
 <!--FIN DE REFONTE-->
-
 
 <script>
     var bouton = document.getElementById("bouton");
