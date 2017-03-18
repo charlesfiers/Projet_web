@@ -1,3 +1,5 @@
+<!-- CODE DES ARTICLES -->
+
 <div class="grid grid-pad">
 <?php foreach ($articles as $art) :?>
 

@@ -4,6 +4,9 @@
 	filter: drop-shadow(0px 0px 2px grey);
 }
 
+body{
+	overflow.display: none;  /*Gestion du décalage à cause de scrollbar*/
+}
 /*Gestion de l'appparition du background coloré*/
 .blockheader_color
 {

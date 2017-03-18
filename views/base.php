@@ -1,3 +1,5 @@
+<!-- CODE DE LA STRUCTURE DE TOUTES LES PAGES -->
+
 <!DOCTYPE html>
 <html>
 

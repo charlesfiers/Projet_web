@@ -1,3 +1,5 @@
+<!-- CODE POUR LA BARRE DE DEFILEMENT-->
+
 <footer>
 	<body onload="plus()">
 <div id="fond"></div>
