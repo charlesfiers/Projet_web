@@ -1,12 +1,18 @@
+body{
+	position: relative;
+	z-index: 0;
+}
+
 #logo{
 	width:100%;
 	display:block;
 	filter: drop-shadow(0px 0px 2px grey);
 }
 
-body{
-	overflow.display: none;  /*Gestion du décalage à cause de scrollbar*/
+body::-webkit-scrollbar {
+  /*Gestion du décalage à cause de scrollbar*/
 }
+
 /*Gestion de l'appparition du background coloré*/
 .blockheader_color
 {
@@ -109,8 +115,11 @@ footer {
 }
 
 #banniere{
-	position: relative;
+	position: fixed;
 	text-align: center;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 
 footer .mini{
@@ -126,9 +135,13 @@ footer .maxi{
 }
 
 #fond{
-	display:block;
+	position: fixed;
 	text-align: center;
 	z-index: -1;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
 }
 
 #miniature{
