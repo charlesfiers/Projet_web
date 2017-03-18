@@ -1,15 +1,15 @@
 <!--REFONTE DU HEADER-->
-<header id="header_background" class="blockheader">
-
+<header <?php echo 'id="'.$animback.'"';?> class="blockheader">
+    <?php $news = 'News'; $infos = 'Infos';?>
     <div class="grid grid-pad">
         <div class="col-1-12">
          <img src="Medias/logoHaF.png" id="logo"> <!--changement de logo-->
         </div>
         <div class="col-10-12">
-            <nav id="bandeau" class="animbando">
+            <nav id="bandeau" <?php echo 'class="'.$anim.'"';?>>
                 <ul>
-                    <a href="http://localhost/Projet/Projet_web/"><li>Infos</li></a> <!--Attention correspond qu'à la machine locale à modifier-->
-                    <a href="<?php echo BASE_URI; ?>actualites"><li>News</li></a>
+                    <a href="<?php echo BASE_URI; ?>."><li <?php if ($position==$infos){echo 'id="ici"';}?> ><?php echo $infos;?></li></a> <!--Attention correspond qu'à la machine locale à modifier-->
+                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position==$news){echo 'id="ici"';}?> ><?php echo $news;?></li></a>
                     <li>News</li>
                     <li>News</li>
                     <li>News</li>

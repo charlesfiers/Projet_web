@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title><?php echo $title; ?></title>
     <meta charset='utf-8' />
+    <?php echo $title; ?>
+    <?php echo $icon; ?>
     <link rel="stylesheet" type="text/css" href="normalize.css" /><!--Reset css-->
     <link rel="stylesheet" type="text/css" href="simplegrid.css" /><!--Chargement de la grille SimpleGrid-->
     <link rel="stylesheet" type="text/css" href="style.css" />
