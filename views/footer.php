@@ -17,6 +17,7 @@
 	var cliq = new objet(0,0);
 	var flag = 0;
 	var time;
+	var multi = 1;
 
 	plus(cliq);
 
@@ -29,7 +30,9 @@
 		clearTimeout(time);
 		var cliq2 = new objet(chiffre,0);
 		delete cliq;
+		multi = 5;
 		plus(cliq2);
+		multi = 1;
 	}
 	function plus(cliq)
 	{
@@ -52,7 +55,7 @@
 
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;
-		time = setTimeout("plus(cliq)", 6000);
+		time = setTimeout("plus(cliq)", (multi*4000));
 	}
 
 	</script>
