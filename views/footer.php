@@ -15,6 +15,8 @@
 		longueur = pictures.length-1;
 
 	var cliq = new objet(0,0);
+	var flag = 0;
+	var time;
 
 	plus(cliq);
 
@@ -24,32 +26,33 @@
 	}
 
 	function clique(chiffre, cliq){
+		clearTimeout(time);
 		var cliq2 = new objet(chiffre,0);
 		delete cliq;
 		plus(cliq2);
 	}
-	function plus(objet)
+	function plus(cliq)
 	{
-		if(objet.chiffre == longueur)
-    	    { objet.chiffre = 0; }
+		if(cliq.chiffre == longueur)
+    	    { cliq.chiffre = 0; }
     	    else
-    	    { objet.chiffre++; }
+    	    { cliq.chiffre++; }
 		
-		switch(objet.chiffre) {
+		switch(cliq.chiffre) {
     	case 0:
-        	code_html = '<img src="'+pictures[objet.chiffre+2]+'" class ="mini" onclick="clique(1,objet)"><img src="'+pictures[objet.chiffre]+'" class ="maxi" onclick="clique(2,objet)"><img src="'+pictures[objet.chiffre+1]+'" class ="mini" onclick="clique(0,objet)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre+2]+'" class ="mini" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(0,cliq)">';
         	break;
     	case 1:
-        	code_html = '<img src="'+pictures[objet.chiffre-1]+'" class ="mini" onclick="clique(2,objet)"><img src="'+pictures[objet.chiffre]+'" class ="maxi" onclick="clique(0,objet)"><img src="'+pictures[objet.chiffre+1]+'" class ="mini" onclick="clique(1,objet)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(1,cliq)">';
         	break;
     	case 2:
-        	code_html = '<img src="'+pictures[objet.chiffre-1]+'" class ="mini" onclick="clique(0,objet)"><img src="'+pictures[objet.chiffre]+'" class ="maxi" onclick="clique(1,objet)"><img src="'+pictures[objet.chiffre-2]+'" class ="mini" onclick="clique(2,objet)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre-2]+'" class ="mini" onclick="clique(2,cliq)">';
 		}
-		code_html2 = '<img src="'+pictures[objet.chiffre]+'">';
+		code_html2 = '<img src="'+pictures[cliq.chiffre]+'">';
 
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;
-		window.setTimeout("plus("+objet+")", 4);
+		time = setTimeout("plus(cliq)", 6000);
 	}
 
 	</script>
