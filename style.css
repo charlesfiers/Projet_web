@@ -1,6 +1,6 @@
 body{
 	position: relative;
-	z-index: 0;
+	z-index: 0;	
 }
 
 #logo{
@@ -25,8 +25,18 @@ body::-webkit-scrollbar {
 }
 
 /* Gestion de l'apparition des éléments de la barre de navigation */
-.blockheader #bandeau{
-	transition: opacity 0.7s;
+.bandeau{
+	-moz-transition: opacity 0.7s;
+	display: block;
+	opacity: 0;
+}
+
+.show{
+	display: block;
+}
+
+.visuallyshow{
+	opacity: 1;
 }
 
 .blockheader #bandeau a{
@@ -34,7 +44,8 @@ body::-webkit-scrollbar {
 }
 
 .blockheader #bandeau ul li:hover{
-	box-shadow: 0pt 0pt 6pt grey;
+	box-shadow: 0pt -6pt 6pt -6pt grey,
+				0pt 6pt 6pt -6pt grey;
 	transition: box-shadow 0.4s;
 }
 .blockheader #bandeau ul li{
@@ -50,10 +61,6 @@ body::-webkit-scrollbar {
 	opacity: 1;
 	margin-top: 30px;
 	width: 47%;
-}
-
-.animbando{
-	display: none;
 }
 
 #bandeau ul{
@@ -135,6 +142,7 @@ footer .maxi{
 }
 
 #fond{
+	-moz-transition: opacity 0.4s;
 	position: fixed;
 	text-align: center;
 	z-index: -1;
@@ -152,6 +160,11 @@ footer .maxi{
 	background-color: #1c171d;
 }
 
-#ici{
-	border: 1px solid grey;
+.ici{
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+}
+
+.visuallyhidden{
+	opacity: 0;
 }

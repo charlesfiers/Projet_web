@@ -34,6 +34,12 @@
 		plus(cliq2);
 		multi = 1;
 	}
+
+	function disparition(cliq){
+        setTimeout("document.getElementById('fond').classList.toggle('visuallyhidden');", 400);
+        plus(cliq);
+    }
+
 	function plus(cliq)
 	{
 		if(cliq.chiffre == longueur)
@@ -55,7 +61,8 @@
 
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;
-		time = setTimeout("plus(cliq)", (multi*4000));
+		time = setTimeout("disparition(cliq)", (multi*4000));
+		setTimeout("document.getElementById('fond').classList.toggle('visuallyhidden')",3600);
 	}
 
 	</script>

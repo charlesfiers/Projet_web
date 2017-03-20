@@ -7,10 +7,10 @@
          <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
         </div>
         <div class="col-10-12">
-            <nav id="bandeau" <?php echo 'class="'.$anim.'"';?>>
+            <nav id="bandeau" class="bandeau">
                 <ul>
-                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position==$infos){echo 'id="ici"';}?> ><?php echo $infos;?></li></a> <!--Attention correspond qu'à la machine locale à modifier-->
-                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position==$news){echo 'id="ici"';}?> ><?php echo $news;?></li></a>
+                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position==$infos){echo 'class="ici"';}?> ><?php echo $infos;?></li></a> <!--Attention correspond qu'à la machine locale à modifier-->
+                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position==$news){echo 'class="ici"';}?> ><?php echo $news;?></li></a>
                     <li>News</li>
                     <li>News</li>
                     <li>News</li>
@@ -26,14 +26,26 @@
 
 
 <script>
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
     var bouton = document.getElementById("bouton");
     var menu1 = document.getElementById("bandeau");
     var background = document.getElementById("header_background");
 
     bouton.addEventListener("click", function() {
+        if (hasClass(menu1, "show")) {
+            menu1.classList.toggle("visuallyshow");
+            setTimeout(function() {
+                menu1.classList.toggle("show");
+            }, 700);
 
-      menu1.classList.toggle("animbando");
-      background.classList.toggle("blockheader_color"); //Gestion de l'apparition du background de la barre de navigation
+        } else {
+            menu1.classList.toggle("show");
+            menu1.classList.toggle("visuallyshow");
+        }
+      /*background.classList.toggle("blockheader_color")*/; //Gestion de l'apparition du background de la barre de navigation
 
   });
 </script>

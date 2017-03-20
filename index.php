@@ -16,8 +16,7 @@ function hello(){
 		array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 				'title' => ' <title>Halle au Frais</title>' , 
 				'footer' => 'yes',
-				'anim' => 'animbando',
-				'animback' => 'header_background',
+				'animback' => 'backfixe',
 				'position' => 'Infos'));
 
 }
@@ -27,9 +26,8 @@ function actualites(){
 	Flight::render('news', array('articles' => $articles), 'main_content');
 	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Halle au Frais</title>',
-					'anim' => 'bandofixe',
 					'animback' => 'backfixe',
-					'position' => 'News'));
+					'position' => 'News',));
 }
 
 
