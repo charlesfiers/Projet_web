@@ -1,7 +1,7 @@
 <!-- CODE POUR LA BARRE DE DEFILEMENT-->
 
 <footer>
-<div id="f_g" onclick="clique2(chiffre)"></div><div id="f_d" onclick="clique3(chiffre)"></div>
+<div id="f_g" onclick="clique2(position)"></div><div id="f_d" onclick="clique3(position)"></div>
 <div id="fond"></div></div>
 <div id="banniere"></div>
 <div id="halo"></div>
@@ -15,89 +15,100 @@
 		pictures[2] = '<?php echo BASE_URI; ?>Medias/icone3.png';
 		longueur = pictures.length-1;
 
-	var cliq = new objet(0,0);
+	var cliq = new objet(0);
 	var time;
 	var time2;
 	var time3;
+	var time4;
+	var time5;
 	var multi = 1;
-	var chiffre=1;
+	var position = 0;
 	plus(cliq);
 
 	function objet(ch){
 		this.chiffre = ch;
 	}
 
-	function clique(chiffre, cliq){
+	function clique(chiffre,cliq){
 		clearTimeout(time);
 		clearTimeout(time2);
 		clearTimeout(time3);
+		clearTimeout(time4);
+		clearTimeout(time5);
 		var cliq2 = new objet(chiffre);
-		delete cliq;
+		cliq = cliq2;
+		delete cliq2;
 		multi = 5;
-		plus(cliq2);
+		plus(cliq);
 	}
 
-	function clique2(chiffre){
+	function clique2(position){
 		clearTimeout(time);
 		clearTimeout(time2);
 		clearTimeout(time3);
-		switch(chiffre){
+		clearTimeout(time4);
+		clearTimeout(time5);
+		switch (position){
 			case 0:
-				chiffre=1;
+				position = 1
+				break;
 			case 1:
-				chiffre=2;
+				position = 2
+				break;
 			case 2:
-				chiffre=0;
+				position = 0
+				break;
 		}
-		var cliq2 = new objet(chiffre);
-		delete cliq;
+		var cliq2 = new objet(position);
+		cliq = cliq2;
+		delete cliq2;
 		multi = 5;
-		plus(cliq2);
+		plus(cliq);
 	}
 
-	function clique3(chiffre){
+	function clique3(position){
 		clearTimeout(time);
 		clearTimeout(time2);
 		clearTimeout(time3);
-		var cliq2 = new objet(chiffre);
-		delete cliq;
+		clearTimeout(time4);
+		clearTimeout(time5);
+		var cliq2 = new objet(position);
+		cliq = cliq2;
+		delete cliq2;
 		multi = 5;
-		plus(cliq2);
+		plus(cliq);
 	}
-
-	function disparition(cliq){
-		multi = 1;
-        document.getElementById('fond').classList.toggle('visuallyhidden');
-        plus(cliq);
-    }
-
-    function defilement(){
-    	document.getElementById('banniere').classList.toggle('defile');
-    	setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",600);
-    	setTimeout("document.getElementById('banniere').classList.toggle('defile')",600);
-    	setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",1200);	
-    }
 
 	function plus(cliq)
 	{	
-		if (chiffre==longueur) {chiffre=0;} else{chiffre++;};
-		switch(chiffre) {
+		if (cliq.chiffre==longueur) {cliq.chiffre=0;} else{cliq.chiffre++;};
+		switch(cliq.chiffre) {
     	case 0:
-        	code_html = '<img src="'+pictures[chiffre+2]+'" class ="mini" onclick="clique(1,cliq)"><img src="'+pictures[chiffre]+'" class ="maxi" onclick="clique(2,cliq)"><img src="'+pictures[chiffre+1]+'" class ="mini" onclick="clique(0,cliq)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre+2]+'" class ="mini" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(0,cliq)">';
         	break;
     	case 1:
-        	code_html = '<img src="'+pictures[chiffre-1]+'" class ="mini" onclick="clique(2,cliq)"><img src="'+pictures[chiffre]+'" class ="maxi" onclick="clique(0,cliq)"><img src="'+pictures[chiffre+1]+'" class ="mini" onclick="clique(1,cliq)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(1,cliq)">';
         	break;
     	case 2:
-        	code_html = '<img src="'+pictures[chiffre-1]+'" class ="mini" onclick="clique(0,cliq)"><img src="'+pictures[chiffre]+'" class ="maxi" onclick="clique(1,cliq)"><img src="'+pictures[chiffre-2]+'" class ="mini" onclick="clique(2,cliq)">';
+        	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre-2]+'" class ="mini" onclick="clique(2,cliq)">';
 		}
-		code_html2 = '<img src="'+pictures[chiffre]+'">';
-
+		code_html2 = '<img src="'+pictures[cliq.chiffre]+'">';
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;
-		time = setTimeout("disparition(cliq)", (multi*6000));
-		time2 = setTimeout("document.getElementById('fond').classList.toggle('visuallyhidden')",((multi*6000)-(600)));
-		time3 = setTimeout("defilement()", (multi*6000)-600);
+		position = cliq.chiffre;
+		time = setTimeout("transition(cliq)", (multi*6000));
+		
+	}
+
+	function transition(cliq){
+		document.getElementById('fond').classList.toggle('visuallyhidden');
+		time = setTimeout("document.getElementById('fond').classList.toggle('visuallyhidden')",500);
+		document.getElementById('banniere').classList.toggle('defile');
+    	time2 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",500);
+    	time3 = setTimeout("document.getElementById('banniere').classList.toggle('defile')",500);
+    	time4 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",1000);
+		multi = 1;
+        time5 = setTimeout("plus(cliq)",500);
 	}
 
 	</script>
