@@ -1,6 +1,6 @@
 body{
 	position: relative;
-	z-index: 0;	
+	z-index: 3;	
 }
 
 #logo{
@@ -142,13 +142,13 @@ footer {
 }
 
 #halo{
-	width: 140px;
-	height: 140px;
+	width: 273px;
+	height: 130px;
 	background: transparent;
-	box-shadow: 0pt 0pt 6pt grey;
+	box-shadow: 0pt 0pt 10pt black;
 	position: fixed;
-	bottom: 1%;
-	left: 44.2%;
+	bottom: 1.2%;
+	left: 38.8%;
 
 }
 
@@ -169,7 +169,11 @@ footer {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	top: 30%;
+	top: 10%;
+}
+
+#fond img{
+	height: 700px;
 }
 
 #miniature{

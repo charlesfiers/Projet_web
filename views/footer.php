@@ -10,9 +10,15 @@
 
 	<script language="javascript">
 	pictures = new Array()
-		pictures[0] = '<?php echo BASE_URI; ?>Medias/icone1.png';
-		pictures[1] = '<?php echo BASE_URI; ?>Medias/icone2.png';
-		pictures[2] = '<?php echo BASE_URI; ?>Medias/icone3.png';
+		pictures[0] = '<?php echo BASE_URI; ?>Medias/image1petit.png';
+		pictures[1] = '<?php echo BASE_URI; ?>Medias/image2petit.png';
+		pictures[2] = '<?php echo BASE_URI; ?>Medias/image3petit.png';
+		pictures[3] = '<?php echo BASE_URI; ?>Medias/image4petit.png';
+		pictures[4] = '<?php echo BASE_URI; ?>Medias/image1.png';
+		pictures[5] = '<?php echo BASE_URI; ?>Medias/image2.png';
+		pictures[6] = '<?php echo BASE_URI; ?>Medias/image3.png';
+		pictures[7] = '<?php echo BASE_URI; ?>Medias/image4.png';
+		
 		longueur = pictures.length-1;
 
 	var cliq = new objet(0);
@@ -81,18 +87,22 @@
 
 	function plus(cliq)
 	{	
-		if (cliq.chiffre==longueur) {cliq.chiffre=0;} else{cliq.chiffre++;};
+		if (cliq.chiffre==2) {cliq.chiffre=0;} else{cliq.chiffre++;};
 		switch(cliq.chiffre) {
     	case 0:
         	code_html = '<img src="'+pictures[cliq.chiffre+2]+'" class ="mini" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(0,cliq)">';
+        	code_html2 = '<img src="'+pictures[cliq.chiffre+4]+'" style.Zindex="0"><img src="'+pictures[cliq.chiffre+5]+'" style.Zindex="-1"><img src="'+pictures[cliq.chiffre+6]+'" " style.Zindex="-2">';
         	break;
     	case 1:
         	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(2,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre+1]+'" class ="mini" onclick="clique(1,cliq)">';
+        	code_html2 = '<img src="'+pictures[cliq.chiffre+4]+'" style.Zindex="-2"><img src="'+pictures[cliq.chiffre+5]+'" style.Zindex="0"><img src="'+pictures[cliq.chiffre+6]+'" " style.Zindex="-1">';
         	break;
     	case 2:
         	code_html = '<img src="'+pictures[cliq.chiffre-1]+'" class ="mini" onclick="clique(0,cliq)"><img src="'+pictures[cliq.chiffre]+'" class ="maxi" onclick="clique(1,cliq)"><img src="'+pictures[cliq.chiffre-2]+'" class ="mini" onclick="clique(2,cliq)">';
+			code_html2 = '<img src="'+pictures[cliq.chiffre+4]+'" style.Zindex="-1"><img src="'+pictures[cliq.chiffre+5]+'" style.Zindex="-2"><img src="'+pictures[cliq.chiffre+6]+'" " style.Zindex="0">';
+			break;
 		}
-		code_html2 = '<img src="'+pictures[cliq.chiffre]+'">';
+		
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;
 		position = cliq.chiffre;
