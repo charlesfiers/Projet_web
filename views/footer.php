@@ -29,17 +29,17 @@
 		this.chiffre = ch;
 	}
 
-	function clique(chiffre,cliq){
+	function clique(x,cliq){
 		clearTimeout(time);
 		clearTimeout(time2);
 		clearTimeout(time3);
 		clearTimeout(time4);
 		clearTimeout(time5);
-		var cliq2 = new objet(chiffre);
+		var cliq2 = new objet(x);
 		cliq = cliq2;
 		delete cliq2;
 		multi = 5;
-		plus(cliq);
+		transition2(cliq);
 	}
 
 	function clique2(position){
@@ -63,7 +63,7 @@
 		cliq = cliq2;
 		delete cliq2;
 		multi = 5;
-		plus(cliq);
+		transition2(cliq);
 	}
 
 	function clique3(position){
@@ -76,7 +76,7 @@
 		cliq = cliq2;
 		delete cliq2;
 		multi = 5;
-		plus(cliq);
+		transition2(cliq);
 	}
 
 	function plus(cliq)
@@ -109,6 +109,15 @@
     	time4 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",1000);
 		multi = 1;
         time5 = setTimeout("plus(cliq)",500);
+	}
+
+	function transition2(cliq){	
+		time3 = setTimeout("plus(cliq)",600);
+		document.getElementById('fond').classList.toggle('visuallyhidden');
+		document.getElementById('banniere').classList.toggle('visuallyhidden');
+		time = setTimeout("document.getElementById('fond').classList.toggle('visuallyhidden')",600);
+		time2 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",600);
+		multi = 1;
 	}
 
 	</script>
