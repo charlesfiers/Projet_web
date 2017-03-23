@@ -112,13 +112,13 @@
 
 	function transition(cliq){
 		document.getElementById('devant').classList.toggle('visuallyhidden');
-		time = setTimeout("document.getElementById('devant').classList.toggle('visuallyhidden')",500);
+		time = setTimeout("document.getElementById('devant').classList.toggle('visuallyhidden')",2000);
 		document.getElementById('banniere').classList.toggle('defile');
     	time2 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",500);
     	time3 = setTimeout("document.getElementById('banniere').classList.toggle('defile')",500);
-    	time4 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",1000);
+    	time4 = setTimeout("document.getElementById('banniere').classList.toggle('visuallyhidden')",2000);
 		multi = 1;
-        time5 = setTimeout("plus(cliq)",500);
+        time5 = setTimeout("plus(cliq)",2000);
 	}
 
 	function transition2(cliq){
