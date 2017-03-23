@@ -32,7 +32,8 @@ function actualites(){
 //Création de commercants
 function commercants(){
 	$commercants = Model::factory('Commercant')->find_many();
-	Flight::render('commercants',array('commercants' => $commercants),'main_content');
+	$boutiques = Model::factory('Boutique')->find_many();
+	Flight::render('commercants',array('commercants' => $commercants, 'boutiques'=> $boutiques),'main_content');
 	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Commerçants - Halles au Frais</title>',
 					'animback' => 'backfixe',
