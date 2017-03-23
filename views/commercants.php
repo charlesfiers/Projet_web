@@ -1,9 +1,9 @@
 <section>
 	<?php foreach ($commercants as $commercant): ?>
 	<article>
-		<header>
-			<h1><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h1>
-
+		<header class="header_art_comm">
+			<img src="<?php echo $commercant->photo ?>" class='commercant_pic'>
+			<h1 class="inline_titleh1"><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h1>
 		</header>
 		<section>
 			
