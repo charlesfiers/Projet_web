@@ -45,7 +45,7 @@ function hasClass(element, cls) {
             menu1.classList.toggle("show");
             menu1.classList.toggle("visuallyshow");
         }
-      /*background.classList.toggle("blockheader_color")*/; //Gestion de l'apparition du background de la barre de navigation
+      background.classList.toggle("blockheader_color"); //Gestion de l'apparition du background de la barre de navigation
 
   });
 </script>

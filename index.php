@@ -16,7 +16,7 @@ function hello(){
 		array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 				'title' => ' <title>Halle au Frais</title>' , 
 				'footer' => 'yes',
-				'animback' => 'backfixe',
+				'animback' => 'header_background',
 				'position' => 'Infos'));
 
 }
@@ -25,9 +25,9 @@ function actualites(){
 	$articles = Model::factory('Article')->find_many();
 	Flight::render('news', array('articles' => $articles), 'main_content');
 	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
-					'title' => '<title>Halle au Frais</title>',
+					'title' => '<title>News - Halle au Frais</title>',
 					'animback' => 'backfixe',
-					'position' => 'News',));
+					'position' => 'News', ));
 }
 
 
