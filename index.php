@@ -2,7 +2,7 @@
 
 <?php 
 
-define('BASE_URI', 'http://localhost/Projet/Projet_web/'); // attention ne correspond qu'à la machine locale
+define('BASE_URI', 'http://localhost/'); // attention ne correspond qu'à la machine locale
 
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
