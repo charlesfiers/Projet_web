@@ -2,7 +2,7 @@
 
 <?php 
 
-define('BASE_URI', 'http://localhost/Projet/Projet_web/'); // attention ne correspond qu'à la machine locale
+define('BASE_URI', 'http://127.0.0.1:8080/edsa-PROJETTUT/'); // attention ne correspond qu'à la machine locale
 
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
@@ -16,7 +16,7 @@ function hello(){
 		array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 				'title' => ' <title>Halle au Frais</title>' , 
 				'footer' => 'yes',
-				'animback' => 'backfixe',
+				'animback' => 'header_background',
 				'position' => 'Infos'));
 
 }
@@ -29,9 +29,18 @@ function actualites(){
 					'animback' => 'backfixe',
 					'position' => 'News',));
 }
-
+//Création de commercants
+function commercants(){
+	Flight::render('commercants',NULL,'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Halle au Frais - Commerçants</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
 
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
+Flight::route('/commercants','commercants');
+
 
 Flight::start();
