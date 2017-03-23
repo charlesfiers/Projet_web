@@ -6,7 +6,7 @@ define('BASE_URI', 'http://127.0.0.1:8080/edsa-PROJETTUT/'); // attention ne cor
 
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
-require_once 'models/article.php';
+require_once 'models/class.php';
 ORM::configure('sqlite:Data/bidon.sqlite');
 
 require 'libs/flight/flight/Flight.php';
@@ -31,9 +31,10 @@ function actualites(){
 }
 //Création de commercants
 function commercants(){
-	Flight::render('commercants',NULL,'main_content');
+	$commercants = Model::factory('Commercant')->find_many();
+	Flight::render('commercants',array('commercants' => $commercants),'main_content');
 	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
-					'title' => '<title>Halle au Frais - Commerçants</title>',
+					'title' => '<title>Commerçants - Halles au Frais</title>',
 					'animback' => 'backfixe',
 					'position' => 'Commercants',));
 }
