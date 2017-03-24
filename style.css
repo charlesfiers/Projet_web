@@ -14,17 +14,17 @@ article img{
 	width:100%;
 	margin-left:auto;
 	margin-right:auto;
-	border: 2px solid grey;
+	border: 2px solid gray;
 }
 
 article .description{
 	font-style: italic;
-	color: grey;
+	color: gray;
 }
 
 article .legend{
 	font-style: italic;
-	color: grey;
+	color: gray;
 	font-size: 0.8em;
 	text-align: right;
 }
@@ -39,7 +39,7 @@ article .contenu{
 #logo{
 	width:100%;
 	display:block;
-	filter: drop-shadow(0px 0px 2px grey);
+	filter: drop-shadow(0px 0px 2px gray);
 }
 
 header .grid{
@@ -65,27 +65,27 @@ header .grid{
 
 /* --- CSS DU MENU --- */
 
-.bandeau{
+.menu{
 	-moz-transition: opacity 0.7s;
 	-webkit-transition: opacity 0.7s;
 	display: none;
 	opacity: 0;
 }
 
-.blockheader #bandeau a{
+.blockheader #menu a{
 	text-decoration: none;
 }
 
-.blockheader #bandeau ul li:hover{
-	box-shadow: 0pt -6pt 6pt -6pt grey,
-				0pt 6pt 6pt -6pt grey;
+.blockheader #menu ul li:hover{
+	box-shadow: 0pt -6pt 6pt -6pt gray,
+				0pt 6pt 6pt -6pt gray;
 	transition: box-shadow 0.4s;
 }
-.blockheader #bandeau ul li{
+.blockheader #menu ul li{
 	transition: box-shadow 0.4s;
 }
 
-.blockheader #bandeau ul{
+.blockheader #menu ul{
 	text-align: right;
 }
 
@@ -96,7 +96,7 @@ header .grid{
 	width: 47%;
 }
 
-#bandeau ul{
+#menu ul{
 	list-style-type: none;
 	text-align: center;
 	margin:0;
@@ -105,7 +105,7 @@ header .grid{
 
 }
 
-#bandeau ul li{
+#menu ul li{
 	display: inline;
     width: 60px;
     padding-bottom: 10px;
@@ -115,7 +115,7 @@ header .grid{
     color: white;
 }
 
-#bandeau{
+#menu{
 	padding: 0;
 	margin:0;
 }
@@ -229,6 +229,27 @@ footer {
 .ici{
 	border-top: 2px solid gray;
 	border-bottom: 2px solid gray;
+}
+
+#bandeau{
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	width: 100%;
+	height: 300px;
+	z-index: 5;
+	background-color: rgba(255,255,255,0.5);
+	position: fixed;
+	top: 24%;
+	text-align: center;
+	font: 60px 'Arizonia', Helvetica, sans-serif;
+}
+
+#bandeau h1{
+	position: relative;
+	color: white;
+	opacity: 1;
+	top: -5%;
+	z-index: 6;
 }
 
 /* --- CSS DES TRANSITIONS --- */

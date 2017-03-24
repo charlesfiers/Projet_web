@@ -7,7 +7,7 @@
          <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
         </div>
         <div class="col-10-12">
-            <nav id="bandeau" class="bandeau">
+            <nav id="menu" class="menu">
                 <ul>
                     <a href="<?php echo BASE_URI; ?>"><li <?php if ($position==$infos){echo 'class="ici"';}?> ><?php echo $infos;?></li></a> <!--Attention correspond qu'à la machine locale à modifier-->
                     <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position==$news){echo 'class="ici"';}?> ><?php echo $news;?></li></a>
@@ -31,7 +31,7 @@ function hasClass(element, cls) {
 }
 
     var bouton = document.getElementById("bouton");
-    var menu1 = document.getElementById("bandeau");
+    var menu1 = document.getElementById("menu");
     var background = document.getElementById("header_background");
 
     bouton.addEventListener("click", function() {
