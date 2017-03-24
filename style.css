@@ -1,7 +1,40 @@
+/* --- CSS DU BODY --- */
+
 body{
 	position: relative;
 	z-index: 3;	
 }
+
+body::-webkit-scrollbar {
+  /*Gestion du décalage à cause de scrollbar*/
+}
+
+article img{
+	display:block;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	border: 2px solid grey;
+}
+
+article .description{
+	font-style: italic;
+	color: grey;
+}
+
+article .legend{
+	font-style: italic;
+	color: grey;
+	font-size: 0.8em;
+	text-align: right;
+}
+
+article .contenu{
+	text-align: justify;
+}
+
+
+/* --- CSS DU HEADER --- */
 
 #logo{
 	width:100%;
@@ -9,35 +42,34 @@ body{
 	filter: drop-shadow(0px 0px 2px grey);
 }
 
-body::-webkit-scrollbar {
-  /*Gestion du décalage à cause de scrollbar*/
+header .grid{
+	padding-bottom: 15px;
 }
 
-/*Gestion de l'appparition du background coloré*/
+/* --- CSS DU BACKGROUND DU HEADER --- */
+
 .blockheader_color
 {
 	background-color: #1c171d;
 	transition: 0.7s;
 }
+
 .blockheader
 {
 	transition: 0.4s;
 }
 
-/* Gestion de l'apparition des éléments de la barre de navigation */
+#backfixe{
+	background-color: #1c171d;
+}
+
+/* --- CSS DU MENU --- */
+
 .bandeau{
 	-moz-transition: opacity 0.7s;
 	-webkit-transition: opacity 0.7s;
 	display: none;
 	opacity: 0;
-}
-
-.show{
-	display: block;
-}
-
-.visuallyshow{
-	opacity: 1;
 }
 
 .blockheader #bandeau a{
@@ -72,6 +104,7 @@ body::-webkit-scrollbar {
 	padding-top: 35px;
 
 }
+
 #bandeau ul li{
 	display: inline;
     width: 60px;
@@ -81,38 +114,13 @@ body::-webkit-scrollbar {
     padding-right: 25px;
     color: white;
 }
+
 #bandeau{
 	padding: 0;
 	margin:0;
 }
 
-article .contenu{
-	text-align: justify;
-}
-
-article img{
-	display:block;
-	width:100%;
-	margin-left:auto;
-	margin-right:auto;
-	border: 2px solid grey;
-}
-
-article .description{
-	font-style: italic;
-	color: grey;
-}
-
-article .legend{
-	font-style: italic;
-	color: grey;
-	font-size: 0.8em;
-	text-align: right;
-}
-
-header .grid{
-	padding-bottom: 15px;
-}
+/* --- CSS DU FOOTER --- */
 
 footer {
 	display: block;
@@ -192,19 +200,6 @@ footer {
 	width: 100%;
 }
 
-#backfixe{
-	background-color: #1c171d;
-}
-
-.ici{
-	border-top: 2px solid gray;
-	border-bottom: 2px solid gray;
-}
-
-.visuallyhidden{
-	opacity: 0;
-}
-
 #f_g{
 	z-index: 6;
 	position: fixed;
@@ -230,3 +225,23 @@ footer {
 	bottom:50%;
 	opacity: 0.8;
 }
+
+.ici{
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+/* --- CSS DES TRANSITIONS --- */
+
+.show{
+	display: block;
+}
+
+.visuallyshow{
+	opacity: 1;
+}
+
+.visuallyhidden{
+	opacity: 0;
+}
+
