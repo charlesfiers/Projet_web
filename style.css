@@ -245,6 +245,7 @@ footer {
 }
 
 #bandeau h1{
+	text-shadow: 2px 2px #050043;
 	position: relative;
 	color: white;
 	opacity: 1;
