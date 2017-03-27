@@ -1,40 +1,51 @@
-<!--REFONTE DU HEADER-->
-<header id="header_background" class="blockheader">
-    <div class="grid grid-pad">
+<!--CODE DE LA BARRE DU MENU-->
 
-        <div class="grid grid-pad">
-            <div class="col-1-12">
-             <img src="Medias/logoHaF.png" id="logo"> <!--changement de logo-->
-            </div>
-            <div class="col-10-12">
-                <nav id="bandeau" class="animbando">
-                    <ul>
-                        <li><a href="http://localhost/Projet/Projet_web/">Infos</a></li> <!--Attention correspond qu'à la machine locale à modifier-->
-                        <li> <a href="<?php echo BASE_URI; ?>actualites">News</a></li>
-                        <li>News</li>
-                        <li>News</li>
-                        <li>News</li>
-                        <li>News</li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-1-12">
-                <img src="Medias/square.png" id="bouton">
-            </div>
+<header <?php echo 'id="'.$animback.'"';?> class="blockheader">
+    <div class="grid grid-pad">
+        <div class="col-1-12">
+         <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
+        </div>
+        <div class="col-10-12">
+            <nav id="menu" class="menu">
+                <ul>
+                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position=='Infos'){echo 'class="ici"';}?> >Infos</li></a> <!--Attention correspond qu'à la machine locale à modifier-->
+                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position=='News'){echo 'class="ici"';}?>>News</li></a>
+                    <a href="<?php echo BASE_URI; ?>commercants"><li <?php if ($position=='Commercants'){echo 'class="ici"';}?>>Commerçants</li></a>
+                    <li>News</li>
+                    <li>News</li>
+                    <li>News</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-1-12">
+            <img src="Medias/square.png" id="bouton">
         </div>
     </div>
 </header>
-<!--FIN DE REFONTE-->
+
 
 <script>
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
     var bouton = document.getElementById("bouton");
-    var menu1 = document.getElementById("bandeau");
+    var menu1 = document.getElementById("menu");
     var background = document.getElementById("header_background");
 
     bouton.addEventListener("click", function() {
+        if (hasClass(menu1, "show")) {
+            menu1.classList.toggle("visuallyshow");
+            setTimeout(function() {
+                menu1.classList.toggle("show");
+            }, 700);
 
-      menu1.classList.toggle("animbando");
+        } else {
+            menu1.classList.toggle("show");
+            menu1.classList.toggle("visuallyshow");
+        }
       background.classList.toggle("blockheader_color"); //Gestion de l'apparition du background de la barre de navigation
+
 
   });
 </script>
