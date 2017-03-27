@@ -269,3 +269,47 @@ footer {
 	opacity: 0;
 }
 
+/* --- CSS COMMERCANTS -- */
+.commercant_pic{
+	display: inline-block;
+	width: 100px;
+	border: none;
+	margin:0;
+	vertical-align: middle;
+}
+.section_comm h1{
+	display: inline-block;
+	margin:0;
+}
+.section_comm h2{
+	display: inline-block;
+	margin:0;
+	font-weight:normal;
+	font-size: 1.3em;
+}
+
+.header_art_comm{
+	border-bottom: #fff solid 1px;
+	border-top: #fff solid 1px;
+	border-radius: 15px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #2f2b30;
+}
+.section_comm{
+	background-color: #1c171d;
+	padding: 20px;
+	color: #fff;
+	border-radius: 20px;
+}
+
+.align_on_char{
+	white-space: pre;
+	font-family: Roboto;
+}
+.section_comm article header .div_align{
+	display: inline-block;
+	margin:0;
+	vertical-align: middle;
+
+}
