@@ -201,9 +201,9 @@ footer {
 	height:0px;
 	border:1px solid white;
 	border-color:transparent white transparent transparent;
-	border-width:40px 20px 40px 0;
+	border-width:4em 2em 4em 0px;
 	left: 5%;
-	bottom:50%;
+	bottom:47%;
 	opacity: 0.8;
 }
 
@@ -214,9 +214,9 @@ footer {
 	height:0px;
 	border:1px solid white;
 	border-color:transparent transparent transparent white;
-	border-width:40px 0px 40px 20px;
+	border-width:4em 0px 4em 2em;
 	right: 5%;
-	bottom:50%;
+	bottom:47%;
 	opacity: 0.8;
 }
 
