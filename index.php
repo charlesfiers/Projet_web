@@ -41,7 +41,7 @@ function commercants(){
 }
 
 function contacts(){
-	Flight::render('contacts',array(),'main_content');
+	Flight::render('contact',array(),'main_content');
 	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Contacts - Halle au Frais</title>',
 					'animback' => 'backfixe',
