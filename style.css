@@ -5,10 +5,6 @@ body{
 	z-index: 3;	
 }
 
-body::-webkit-scrollbar {
-  /*Gestion du décalage à cause de scrollbar*/
-}
-
 article img{
 	display:block;
 	width:100%;
@@ -48,15 +44,14 @@ header .grid{
 
 /* --- CSS DU BACKGROUND DU HEADER --- */
 
+.blockheader{
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
 .blockheader_color
 {
 	background-color: #1c171d;
-	transition: 0.7s;
-}
-
-.blockheader
-{
-	transition: 0.4s;
 }
 
 #backfixe{
@@ -65,9 +60,12 @@ header .grid{
 
 /* --- CSS DU MENU --- */
 
+header #menu{
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
 .menu{
-	-moz-transition: opacity 0.7s;
-	-webkit-transition: opacity 0.7s;
 	display: none;
 	opacity: 0;
 }
@@ -79,10 +77,10 @@ header .grid{
 .blockheader #menu ul li:hover{
 	box-shadow: 0pt -6pt 6pt -6pt gray,
 				0pt 6pt 6pt -6pt gray;
-	transition: box-shadow 0.4s;
 }
 .blockheader #menu ul li{
-	transition: box-shadow 0.4s;
+	-moz-transition: box-shadow 0.4s;
+	-webkit-transition: box-shadow 0.4s;
 }
 
 .blockheader #menu ul{
@@ -113,11 +111,6 @@ header .grid{
     padding-left: 25px;
     padding-right: 25px;
     color: white;
-}
-
-#menu{
-	padding: 0;
-	margin:0;
 }
 
 /* --- CSS DU FOOTER --- */
@@ -244,14 +237,14 @@ footer {
 	text-align: center;
 }
 
-#bandeau h1{
+#bandeau .titre_princ{
 	font-family: 'Poiret One', cursive;
 	font-size: 800%;
 	text-shadow: -2pt -2pt 3pt black;
 	position: relative;
 	color: white;
 	opacity: 1;
-	top: -5%;
+	top: 20%;
 	z-index: 6;
 }
 
@@ -309,7 +302,20 @@ footer {
 }
 .section_comm article header .div_align{
 	display: inline-block;
-	margin:0;
+	margin:0; 
 	vertical-align: middle;
 
+}
+
+.bulles{
+	text-align: center;
+}
+
+.bulles:hover{
+	color: red;
+}
+
+.commercant_desc h4,.commercant_desc h5{
+	margin-bottom: 0;
+	margin-top: 10px;
 }

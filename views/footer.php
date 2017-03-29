@@ -113,7 +113,7 @@
 			code_html2 = '<img src="'+pictures[cliq.chiffre+4]+'" id="devant"><img src="'+pictures[cliq.chiffre+5]+'" id="derriere">';
 		};		
 
-		code_html3 = '<h1>'+text[cliq.chiffre]+'</h1>';
+		code_html3 = '<div class="titre_princ">'+text[cliq.chiffre]+'</div>';
 		document.getElementById('bandeau').innerHTML = code_html3;
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;

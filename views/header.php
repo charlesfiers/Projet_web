@@ -32,17 +32,16 @@ function hasClass(element, cls) {
     var bouton = document.getElementById("bouton");
     var menu1 = document.getElementById("menu");
     var background = document.getElementById("header_background");
+    var time;
 
     bouton.addEventListener("click", function() {
+        clearTimeout(time);
         if (hasClass(menu1, "show")) {
             menu1.classList.toggle("visuallyshow");
-            setTimeout(function() {
-                menu1.classList.toggle("show");
-            }, 700);
-
+            time = setTimeout("menu1.classList.toggle('show')",1000);
         } else {
             menu1.classList.toggle("show");
-            menu1.classList.toggle("visuallyshow");
+            time = setTimeout("menu1.classList.toggle('visuallyshow')",100);
         }
       background.classList.toggle("blockheader_color"); //Gestion de l'apparition du background de la barre de navigation
 
