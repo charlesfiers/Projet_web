@@ -40,9 +40,18 @@ function commercants(){
 					'position' => 'Commercants',));
 }
 
+function contacts(){
+	Flight::render('contacts',array(),'main_content');
+	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Contacts - Halle au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Contacts', ));
+}
+
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
+Flight::route('/contacts','contacts');
 
 
 Flight::start();

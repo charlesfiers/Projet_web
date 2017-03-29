@@ -1,17 +1,11 @@
-<DOCTYPE html>
-<html>
-	<head>
-		<title>Contact/Adresse et Horaires-La Halle au Frais</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<?php include('contact_data.php'); ?>
+
+		<?php include("contact_data.php"); ?>
 			<?php foreach($arr_articles as $arr_articles): ?>
 			<?php foreach($arr_articles as $key => $value): ?>
 				<li><?php echo $key.'<dl/>'.$value; ?></li>
 			<?php endforeach; ?>
 			<?php endforeach; ?>
-	</body>
+
 	<div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing16721"  >
 		<form id="formAcymailing16721" action="/hallefrais/adresse-horaires" onsubmit="return submitacymailingform('optin','formAcymailing16721', 0)" method="post" name="formAcymailing16721"  >
 		<div class="acymailing_module_form" >
@@ -25,4 +19,3 @@
 					<input class="button subbutton btn btn-primary" type="submit" value="S'abonner" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing16721', 0); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
 					</td>
 				</tr>
-</html>
