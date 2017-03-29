@@ -19,7 +19,16 @@
 	</section>
 </div>
 
-<?php
-	/*echo $commercants[0]->nom_comm."<br/>";
-	echo $boutiques[0]->adresse_boutique."<br/>";*/
-?>
+<div class="grid grid-pad">
+	<?php foreach ($commercants as $commercant): ?>
+			<div class="col-1-6">
+			<div class="bulles">
+			<img src="<?php echo $commercant->photo ?>" class="commercant_pic">
+			<div class="commercant_desc">
+				<h4><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>
+				<h5><?php echo $boutiques[$commercant->id_boutique -1]->type_boutique?></h5>
+			</div>
+		</div>
+	</div>
+	<?php endforeach ?>
+</div>
