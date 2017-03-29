@@ -1,17 +1,16 @@
 <!--CODE DE LA BARRE DU MENU-->
 
 <header <?php echo 'id="'.$animback.'"';?> class="blockheader">
-    <?php $news = 'News'; $infos = 'Infos';?>
     <div class="grid grid-pad">
         <div class="col-1-12">
          <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
         </div>
         <div class="col-10-12">
-            <nav id="bandeau" class="bandeau">
+            <nav id="menu" class="menu">
                 <ul>
-                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position==$infos){echo 'class="ici"';}?> ><?php echo $infos;?></li></a> <!--Attention correspond qu'à la machine locale à modifier-->
-                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position==$news){echo 'class="ici"';}?> ><?php echo $news;?></li></a>
-                    <li>News</li>
+                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position=='Infos'){echo 'class="ici"';}?> >Infos</li></a> <!--Attention correspond qu'à la machine locale à modifier-->
+                    <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position=='News'){echo 'class="ici"';}?>>News</li></a>
+                    <a href="<?php echo BASE_URI; ?>commercants"><li <?php if ($position=='Commercants'){echo 'class="ici"';}?>>Commerçants</li></a>
                     <li>News</li>
                     <li>News</li>
                     <li>News</li>
@@ -31,7 +30,7 @@ function hasClass(element, cls) {
 }
 
     var bouton = document.getElementById("bouton");
-    var menu1 = document.getElementById("bandeau");
+    var menu1 = document.getElementById("menu");
     var background = document.getElementById("header_background");
 
     bouton.addEventListener("click", function() {
@@ -45,7 +44,8 @@ function hasClass(element, cls) {
             menu1.classList.toggle("show");
             menu1.classList.toggle("visuallyshow");
         }
-      /*background.classList.toggle("blockheader_color")*/; //Gestion de l'apparition du background de la barre de navigation
+      background.classList.toggle("blockheader_color"); //Gestion de l'apparition du background de la barre de navigation
+
 
   });
 </script>

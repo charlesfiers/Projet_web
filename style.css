@@ -1,58 +1,91 @@
+/* --- CSS DU BODY --- */
+
 body{
 	position: relative;
 	z-index: 3;	
-}
-
-#logo{
-	width:100%;
-	display:block;
-	filter: drop-shadow(0px 0px 2px grey);
 }
 
 body::-webkit-scrollbar {
   /*Gestion du décalage à cause de scrollbar*/
 }
 
-/*Gestion de l'appparition du background coloré*/
+article img{
+	display:block;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	border: 2px solid gray;
+}
+
+article .description{
+	font-style: italic;
+	color: gray;
+}
+
+article .legend{
+	font-style: italic;
+	color: gray;
+	font-size: 0.8em;
+	text-align: right;
+}
+
+article .contenu{
+	text-align: justify;
+}
+
+
+/* --- CSS DU HEADER --- */
+
+#logo{
+	width:5em;
+	display:block;
+	filter: drop-shadow(0px 0px 2px gray);
+}
+
+header .grid{
+	padding-bottom: 15px;
+}
+
+/* --- CSS DU BACKGROUND DU HEADER --- */
+
 .blockheader_color
 {
 	background-color: #1c171d;
 	transition: 0.7s;
 }
+
 .blockheader
 {
 	transition: 0.4s;
 }
 
-/* Gestion de l'apparition des éléments de la barre de navigation */
-.bandeau{
+#backfixe{
+	background-color: #1c171d;
+}
+
+/* --- CSS DU MENU --- */
+
+.menu{
 	-moz-transition: opacity 0.7s;
-	display: block;
+	-webkit-transition: opacity 0.7s;
+	display: none;
 	opacity: 0;
 }
 
-.show{
-	display: block;
-}
-
-.visuallyshow{
-	opacity: 1;
-}
-
-.blockheader #bandeau a{
+.blockheader #menu a{
 	text-decoration: none;
 }
 
-.blockheader #bandeau ul li:hover{
-	box-shadow: 0pt -6pt 6pt -6pt grey,
-				0pt 6pt 6pt -6pt grey;
+.blockheader #menu ul li:hover{
+	box-shadow: 0pt -6pt 6pt -6pt gray,
+				0pt 6pt 6pt -6pt gray;
 	transition: box-shadow 0.4s;
 }
-.blockheader #bandeau ul li{
+.blockheader #menu ul li{
 	transition: box-shadow 0.4s;
 }
 
-.blockheader #bandeau ul{
+.blockheader #menu ul{
 	text-align: right;
 }
 
@@ -60,10 +93,10 @@ body::-webkit-scrollbar {
 	visibility: visible;
 	opacity: 1;
 	margin-top: 30px;
-	width: 47%;
+	width: 60%;
 }
 
-#bandeau ul{
+#menu ul{
 	list-style-type: none;
 	text-align: center;
 	margin:0;
@@ -71,7 +104,8 @@ body::-webkit-scrollbar {
 	padding-top: 35px;
 
 }
-#bandeau ul li{
+
+#menu ul li{
 	display: inline;
     width: 60px;
     padding-bottom: 10px;
@@ -80,38 +114,13 @@ body::-webkit-scrollbar {
     padding-right: 25px;
     color: white;
 }
-#bandeau{
+
+#menu{
 	padding: 0;
 	margin:0;
 }
 
-article .contenu{
-	text-align: justify;
-}
-
-article img{
-	display:block;
-	width:100%;
-	margin-left:auto;
-	margin-right:auto;
-	border: 2px solid grey;
-}
-
-article .description{
-	font-style: italic;
-	color: grey;
-}
-
-article .legend{
-	font-style: italic;
-	color: grey;
-	font-size: 0.8em;
-	text-align: right;
-}
-
-header .grid{
-	padding-bottom: 15px;
-}
+/* --- CSS DU FOOTER --- */
 
 footer {
 	display: block;
@@ -123,74 +132,73 @@ footer {
 
 #banniere{
 	-moz-transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
 	position: fixed;
 	text-align: center;
 	bottom: 0;
 	right: 0;
 	left: 0;
+	z-index: 10;
+}
+
+#banniere img{
+	box-shadow: 0pt 0pt 10pt 5pt black;
 }
 
 .mini{
-	height: 100px;
+	height: 6em;
+	margin-right: 10px;
+	margin-left: 10px;
+
 }
 
 .maxi{
-	height: 130px;
-	margin-right: 30px;
-	margin-left: 30px;
-	padding: 5px; 
-}
-
-#halo{
-	width: 273px;
-	height: 130px;
-	background: transparent;
-	box-shadow: 0pt 0pt 10pt black;
-	position: fixed;
-	bottom: 1.2%;
-	left: 38.8%;
+	height: 8em;
+	margin-right: 20px;
+	margin-left: 20px;
 
 }
 
 .defile{
 	-moz-transform: translate(-140px,0px);
+	-webkit-transform: translate(-140px,0px);
 	opacity: 0;
 }
 
 .defile2{
 	-moz-transform: translate(0px,0px);
+	-webkit-transform: translate(0px,0px);
 }
 
 #fond{
-	-moz-transition: opacity 0.5s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
 	position: fixed;
 	text-align: center;
 	z-index: -1;
+	width: 100%;
+	height: 100%;
 	bottom: 0;
 	right: 0;
-	left: 0;
-	top: 10%;
+	left: -50%;
+	top: 0;
+}
+
+#fond #devant{
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	z-index: -1;
+	position: absolute;
+}
+
+#fond #derriere{
+	z-index: -2;
+	position: absolute;
 }
 
 #fond img{
-	height: 700px;
-}
-
-#miniature{
 	height: 100%;
-}
-
-#backfixe{
-	background-color: #1c171d;
-}
-
-.ici{
-	border-top: 2px solid grey;
-	border-bottom: 2px solid grey;
-}
-
-.visuallyhidden{
-	opacity: 0;
+	width: 100%;
 }
 
 #f_g{
@@ -198,12 +206,12 @@ footer {
 	position: fixed;
 	width:0px;
 	height:0px;
-	border:1px solid grey;
-	border-color:transparent grey transparent transparent;
+	border:1px solid white;
+	border-color:transparent white transparent transparent;
 	border-width:40px 20px 40px 0;
 	left: 5%;
 	bottom:50%;
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 #f_d{
@@ -211,10 +219,97 @@ footer {
 	position: fixed;
 	width:0px;
 	height:0px;
-	border:1px solid grey;
-	border-color:transparent transparent transparent grey;
+	border:1px solid white;
+	border-color:transparent transparent transparent white;
 	border-width:40px 0px 40px 20px;
 	right: 5%;
 	bottom:50%;
-	opacity: 0.6;
+	opacity: 0.8;
+}
+
+.ici{
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+#bandeau{
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	width: 100%;
+	height: 40%;
+	z-index: 5;
+	background-color: rgba(255,255,255,0.5);
+	position: fixed;
+	top: 24%;
+	text-align: center;
+}
+
+#bandeau h1{
+	font-family: 'Poiret One', cursive;
+	font-size: 800%;
+	text-shadow: -2pt -2pt 3pt black;
+	position: relative;
+	color: white;
+	opacity: 1;
+	top: -5%;
+	z-index: 6;
+}
+
+/* --- CSS DES TRANSITIONS --- */
+
+.show{
+	display: block;
+}
+
+.visuallyshow{
+	opacity: 1;
+}
+
+.visuallyhidden{
+	opacity: 0;
+}
+
+/* --- CSS COMMERCANTS -- */
+.commercant_pic{
+	display: inline-block;
+	width: 100px;
+	border: none;
+	margin:0;
+	vertical-align: middle;
+}
+.section_comm h1{
+	display: inline-block;
+	margin:0;
+}
+.section_comm h2{
+	display: inline-block;
+	margin:0;
+	font-weight:normal;
+	font-size: 1.3em;
+}
+
+.header_art_comm{
+	border-bottom: #fff solid 1px;
+	border-top: #fff solid 1px;
+	border-radius: 15px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #2f2b30;
+}
+.section_comm{
+	background-color: #1c171d;
+	padding: 20px;
+	color: #fff;
+	border-radius: 20px;
+}
+
+.align_on_char{
+	white-space: pre;
+	font-family: Roboto;
+}
+.section_comm article header .div_align{
+	display: inline-block;
+	margin:0;
+	vertical-align: middle;
+
 }
