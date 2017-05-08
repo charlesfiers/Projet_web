@@ -39,10 +39,17 @@ function commercants(){
 					'animback' => 'backfixe',
 					'position' => 'Commercants',));
 }
-
+function login(){
+	Flight::render('login',NULL);
+}
+function check(){
+	$log_check = Model::factory('Log_check')->find_many();
+	Flight::render('check',array('log_check' => $log_check));
+}
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
-
+Flight::route('/login','login');
+Flight::route('/check','check');
 
 Flight::start();

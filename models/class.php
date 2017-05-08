@@ -13,4 +13,8 @@ class Boutique extends Model
 {
 	public static $_table = 'boutique';
 }
+class Log_check extends Model
+{
+	public static $_table = 'log_check';
+}
 ?>
