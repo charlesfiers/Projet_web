@@ -1,6 +1,7 @@
 <!-- CODE DES ROUTES ET PARAMETRES DEPENDANTS DE LA ROUTE SUIVIE -->
 
 <?php 
+session_start();
 
 define('BASE_URI', 'http://127.0.0.1:8080/edsa-PROJETTUT/'); // attention ne correspond qu'à la machine locale
 
@@ -46,10 +47,16 @@ function check(){
 	$log_check = Model::factory('Log_check')->find_many();
 	Flight::render('check',array('log_check' => $log_check));
 }
+function logout(){
+	Flight::render('logout',NULL);
+}
+
+
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
 Flight::route('/login','login');
 Flight::route('/check','check');
+Flight::route('/logout','logout');
 
 Flight::start();

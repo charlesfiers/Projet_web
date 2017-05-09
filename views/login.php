@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+  if(!(isset($_SESSION['name']) && isset($_SESSION['pw']))):
+?>
 <!DOCTYPE html>
 
 <html>
@@ -23,6 +25,26 @@
 </body>
 </html>
 
+<?php else:?>
+<!DOCTYPE html>
 
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<link rel="stylesheet" type="text/css" href="normalize.css" /><!--Reset css-->
+	<link rel="stylesheet" type="text/css" href="simplegrid.css" /><!--Chargement de la grille SimpleGrid-->
+	<link rel="stylesheet" type="text/css" href="style2.css" />
+	<title>Login</title>
+</head>
+<body>
+	<div class="grid grid-pad">
+		<div class="col-1-1">
+			<p>Vous êtes déjà connecté.</p>
+		</div>
+	</div>
+</body>
+</html>
+<?php endif; ?>
 
 	
