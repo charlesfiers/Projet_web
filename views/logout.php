@@ -1,4 +1,16 @@
-<?php session_destroy() ?>
+
+
+<?php
+//A AMENAGER AVEC LES COOKIES
+
+
+
+ session_destroy() 
+
+
+//détruit la session => deconnexion. 
+
+ ?> 
 
 <!DOCTYPE html>
 

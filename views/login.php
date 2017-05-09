@@ -1,6 +1,6 @@
 <?php 
-  if(!(isset($_SESSION['name']) && isset($_SESSION['pw']))):
-?>
+  if(!(isset($_SESSION['name']) && isset($_SESSION['pw']))):// si on n'est pas connecté => affiche le formulaire de connexion
+?> 
 <!DOCTYPE html>
 
 <html>
@@ -25,7 +25,7 @@
 </body>
 </html>
 
-<?php else:?>
+<?php else:// si on est déjà connecté alors on affiche pas le formulaire de connexion?> 
 <!DOCTYPE html>
 
 <html>
