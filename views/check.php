@@ -1,12 +1,15 @@
+
 <?php 
+session_start();
+
 if(isset($_POST['login']))
 {
 	$login = $_POST['login'];
 	if (isset($_POST['password']))
 	{
-		$password = $_POST['password'];
-		echo $login."</br>";
-		echo $password;
+		$_SESSION['login']
+		/*openssl_encrypt($password, 'aes-128-cbc', $key);
+		echo $password."</br>";*/
 
 
 

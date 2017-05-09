@@ -1,3 +1,4 @@
+<?php session_start();?>
 
 
 <!-- CODE DE LA STRUCTURE DE TOUTES LES PAGES -->
