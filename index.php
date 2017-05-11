@@ -1,9 +1,11 @@
 <!-- CODE DES ROUTES ET PARAMETRES DEPENDANTS DE LA ROUTE SUIVIE -->
 
 <?php 
+session_start();
 
 
 define('BASE_URI', 'http://localhost/Projet/Projet_web/'); // attention ne correspond qu'à la machine locale
+
 
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
@@ -40,6 +42,17 @@ function commercants(){
 					'animback' => 'backfixe',
 					'position' => 'Commercants',));
 }
+function login(){
+	Flight::render('login',NULL);
+}
+function check(){
+	$log_check = Model::factory('Log_check')->find_many();
+	Flight::render('check',array('log_check' => $log_check));
+}
+function logout(){
+	Flight::render('logout',NULL);
+}
+
 
 function contacts(){
 	Flight::render('contact',array(),'main_content');
@@ -52,7 +65,13 @@ function contacts(){
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
+<<<<<<< HEAD
 Flight::route('/contacts','contacts');
 
+=======
+Flight::route('/login','login');
+Flight::route('/check','check');
+Flight::route('/logout','logout');
+>>>>>>> adame
 
 Flight::start();
