@@ -309,6 +309,8 @@ footer {
 
 .bulles{
 	text-align: center;
+	width: 250px;
+	height:154px;
 }
 
 .bulles:hover{
@@ -318,4 +320,8 @@ footer {
 .commercant_desc h4,.commercant_desc h5{
 	margin-bottom: 0;
 	margin-top: 10px;
+}
+
+#com{
+	display: none;
 }
