@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="style2.css" />
 	<title>Login</title>
 </head>
-<body>
+<body class="menu_login">
 	<div class="grid grid-pad">
 		<div class="col-1-1">
 			<form action="./check" method="post">
