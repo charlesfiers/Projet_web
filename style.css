@@ -10,6 +10,7 @@ html,body,main{
 /* --- CSS DU BODY --- */
 
 body{
+	background-image: url("./Medias/background.jpg");
 	position: relative;
 	z-index: 3;	
 }
@@ -272,6 +273,7 @@ footer {
 }
 
 /* --- CSS COMMERCANTS -- */
+
 .commercant_pic{
 	display: inline-block;
 	width: 100px;
