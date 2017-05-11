@@ -65,13 +65,10 @@ function contacts(){
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
-<<<<<<< HEAD
 Flight::route('/contacts','contacts');
 
-=======
 Flight::route('/login','login');
 Flight::route('/check','check');
 Flight::route('/logout','logout');
->>>>>>> adame
 
 Flight::start();
