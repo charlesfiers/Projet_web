@@ -20,12 +20,12 @@
 </div>
 </div>
 
-<div class="grid grid-pad">
+<div class="grid grid-pad" id="menu_commercants">
 	<?php $m=0;?>
 	<?php foreach ($commercants as $commercant): ?>
 			<div class="col-1-4">
 			<div class="bulles">
-			<a href="#ancre_<?php $m++;echo $m;?>"
+			<a href="#ancre_<?php $m++;echo $m;?>">
 			<img src="<?php echo $commercant->photo ?>" class="commercant_pic">
 			<div class="commercant_desc">
 				<h4><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>

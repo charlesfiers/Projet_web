@@ -1,3 +1,12 @@
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+html,body,main{
+	height:100%;
+}
+
 /* --- CSS DU BODY --- */
 
 body{
@@ -304,7 +313,6 @@ footer {
 	display: inline-block;
 	margin:0; 
 	vertical-align: middle;
-
 }
 
 .bulles{
@@ -320,6 +328,10 @@ footer {
 .commercant_desc h4,.commercant_desc h5{
 	margin-bottom: 0;
 	margin-top: 10px;
+}
+
+#menu_commercants{
+	height: 100%;
 }
 
 #com{
