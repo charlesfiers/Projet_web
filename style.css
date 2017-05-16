@@ -258,6 +258,24 @@ footer {
 	z-index: 6;
 }
 
+#bandeau .savoir{
+	font-family: 'Poiret One', cursive;
+	z-index: 6;
+	width: auto;
+	font-size: 2.5em;
+	display: inline-block;
+	border: 2px solid white;
+	color: white;
+	position: relative;
+	top: 20%;
+	text-shadow: 1pt 1pt 2pt black;
+}
+
+#bandeau .savoir:hover{
+	box-shadow: 0pt 0pt 5pt 1pt gray;
+	text-shadow: 1pt 1pt 1pt black;
+}
+
 /* --- CSS DES TRANSITIONS --- */
 
 .show{
