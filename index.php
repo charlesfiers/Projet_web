@@ -64,10 +64,20 @@ function contacts(){
 					'position' => 'Contacts', ));
 }
 
+function mailing(){
+	$newsletter = Model::factory('newsletter')->find_many();
+	Flight::render('mailing',array('newsletter' => $newsletter),'main_content');
+	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Contacts - Halle au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Mail', ));
+}
+
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
 Flight::route('/contacts','contacts');
+Flight::route('/mailing','mailing');
 
 Flight::route('/login','login');
 Flight::route('/check','check');
