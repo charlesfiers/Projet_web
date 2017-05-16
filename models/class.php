@@ -17,4 +17,8 @@ class Log_check extends Model
 {
 	public static $_table = 'log_check';
 }
+class Informations extends Model
+{
+	public static $_table = 'Informations';
+}
 ?>
