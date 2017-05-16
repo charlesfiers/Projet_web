@@ -12,14 +12,17 @@
 	<link rel="stylesheet" type="text/css" href="style2.css" />
 	<title>Login</title>
 </head>
-<body class="menu_login">
+<body>
 	<div class="grid grid-pad">
 		<div class="col-1-1">
-			<form action="./check" method="post">
-				<p>Login: <input type="text" name="login" /></p>
-				<p>Mot de passe: <input type="password" name="password" /></p>
-				<p><input type="submit" value="Valider"></p>
-			</form>
+			<h1>Connexion administrateur</h1>
+			<div class="menu_login">
+				<form action="./check" method="post">
+					<p>Login: <input type="text" name="login" /></p>
+					<p>Mot de passe: <input type="password" name="password" /></p>
+					<p><input type="submit" value="Valider"></p>
+				</form>
+			</div>
 		</div>
 	</div>
 </body>

@@ -1,6 +1,27 @@
 /* --- CSS LOG -- */
+
+body{
+	background-image: url("./Medias/background.jpg");
+}
+
 .menu_login{
+	background-color: white;
 	text-align: center;
-	vertical-align: center;
 	height: 100%;
+	border: 2pt solid blue;
+	border-radius: 10pt;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	padding: 10px;	
+	left: 33%;
+}
+
+input:hover{
+	box-shadow: 0pt 0pt 0pt 1pt blue;
+}
+
+h1{
+	text-align: center;
+	color: blue;
 }
