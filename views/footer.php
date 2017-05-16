@@ -26,10 +26,10 @@
 		text[3] = 'Boulangerie';
 
 	lien = new Array()
-		lien[0] = '<?php echo BASE_URI; ?>commercants/#ancre_1';
-		lien[1] = '<?php echo BASE_URI; ?>commercants/#ancre_2';
-		lien[2] = '<?php echo BASE_URI; ?>commercants/#ancre_3';
-		lien[3] = '<?php echo BASE_URI; ?>commercants/#ancre_4';
+		lien[0] = '<?php echo BASE_URI; ?>commercants#ancre_1';
+		lien[1] = '<?php echo BASE_URI; ?>commercants#ancre_2';
+		lien[2] = '<?php echo BASE_URI; ?>commercants#ancre_3';
+		lien[3] = '<?php echo BASE_URI; ?>commercants#ancre_4';
 		
 		longueur = pictures.length-1;
 
