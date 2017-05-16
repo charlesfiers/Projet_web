@@ -21,4 +21,7 @@ class Informations extends Model
 {
 	public static $_table = 'Informations';
 }
+class newsletter extends Model{
+	public static $_table = 'newsletter';
+}
 ?>

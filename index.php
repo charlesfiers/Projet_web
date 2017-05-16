@@ -56,7 +56,8 @@ function logout(){
 
 function contacts(){
 	$Informations = Model::factory('Informations')->find_many();
-	Flight::render('contact',array('Informations' => $Informations),'main_content');
+	$newsletter = Model::factory('newsletter')->find_many();
+	Flight::render('contact',array('Informations' => $Informations,'newsletter' => $newsletter),'main_content');
 	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Contacts - Halle au Frais</title>',
 					'animback' => 'backfixe',
