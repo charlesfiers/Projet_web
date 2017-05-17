@@ -363,3 +363,7 @@ footer {
 #logo_fb{
 	width: 2em;
 }
+
+input:hover{
+	box-shadow: 0pt 0pt 1pt 0pt blue;
+}

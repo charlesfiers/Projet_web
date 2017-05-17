@@ -18,7 +18,7 @@ body{
 }
 
 input:hover{
-	box-shadow: 0pt 0pt 0pt 1pt blue;
+	box-shadow: 0pt 0pt 1pt 0pt blue;
 }
 
 h1{
