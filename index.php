@@ -73,6 +73,19 @@ function mailing(){
 					'position' => 'Mail', ));
 }
 
+function admin(){
+	$admin = Model::factory('Administrateur')->find_one($_SESSION['id']);
+	$Informations = Model::factory('Informations')->find_many();
+	$commercants = Model::factory('Commercant')->find_many();
+	$boutiques = Model::factory('Boutique')->find_many();
+	$articles = Model::factory('Article')->find_many();
+	Flight::render('admin',array('admin' => $admin,'infos' => $Informations,'commercants' => $commercants,'boutiques' => $boutiques,'articles' => $articles),'main_content');
+	Flight::render('base', array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Admin - Halle au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Admin', ));
+}
+
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
@@ -82,5 +95,6 @@ Flight::route('/mailing','mailing');
 Flight::route('/login','login');
 Flight::route('/check','check');
 Flight::route('/logout','logout');
+Flight::route('/admin','admin');
 
 Flight::start();

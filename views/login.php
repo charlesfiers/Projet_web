@@ -18,8 +18,10 @@
 			<h1>Connexion administrateur</h1>
 			<div class="menu_login">
 				<form action="./check" method="post">
-					<p>Login: <input type="text" name="login" /></p>
-					<p>Mot de passe: <input type="password" name="password" /></p>
+					<table>
+					<tr><td>Login:</td><td><input type="text" name="login" /></td></tr>
+					<tr><td>Mot de passe: </td><td><input type="password" name="password" /></td></tr>
+					</table>
 					<p><input type="submit" value="Valider"></p>
 				</form>
 			</div>
