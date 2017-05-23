@@ -8,12 +8,10 @@
         <div class="col-10-12">
             <nav id="menu" class="menu">
                 <ul>
-                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position=='Infos'){echo 'class="ici"';}?> >Infos</li></a> <!--Attention correspond qu'à la machine locale à modifier-->
+                    <a href="<?php echo BASE_URI; ?>"><li <?php if ($position=='Infos'){echo 'class="ici"';}?> >Accueil</li></a> <!--Attention correspond qu'à la machine locale à modifier-->
                     <a href="<?php echo BASE_URI; ?>actualites"><li <?php if ($position=='News'){echo 'class="ici"';}?>>News</li></a>
                     <a href="<?php echo BASE_URI; ?>commercants"><li <?php if ($position=='Commercants'){echo 'class="ici"';}?>>Commerçants</li></a>
-                    <a href="<?php echo BASE_URI; ?>contacts"><li <?php if ($position=='Contacts'){echo 'class="ici"';}?>>Contacts</li></a>
-                    <li>News</li>
-                    <li>News</li>
+                    <a href="<?php echo BASE_URI; ?>contacts"><li <?php if ($position=='Contacts'){echo 'class="ici"';}?>>Informations</li></a>
                 </ul>
             </nav>
         </div>

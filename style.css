@@ -163,8 +163,8 @@ footer {
 }
 
 .defile{
-	-moz-transform: translate(-140px,0px);
-	-webkit-transform: translate(-140px,0px);
+	-moz-transform: translate(0px,120px);
+	-webkit-transform: translate(0px,120px);
 	opacity: 0;
 }
 
