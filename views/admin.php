@@ -33,21 +33,22 @@
 					break;
 
 				case 'boutique':
-					echo "<form method='POST' action='./admin'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><table><tr><td>Nom: </td><td><input type='text' name='title'></td></tr><tr><td>Adresse: </td><td><textarea rows='2' name='content'></textarea></td></tr><tr><td>Ville: </td><td><input type='text' name='ville'></td></tr><tr><td>Type: </td><td><input type='text' name='type'></td></tr><tr><td><input type='submit' value='Enregistrer'></td></tr></table></form>";
+					echo "<form method='POST' action='./admin'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><table><tr><td>Nom: </td><td><input type='text' name='title'></td></tr><tr><td>Adresse: </td><td><textarea rows='2' name='content'></textarea></td></tr><tr><td>Ville: </td><td><input type='text' name='ville'></td></tr><tr><td>Type: </td><td><input type='text' name='type'></td></tr><tr><td>Lien photo: </td><td><input type='text' name='photo' value='./Medias/Boutiques/exemple.png'></td></tr><tr><td><input type='submit' value='Enregistrer'></td></tr></table></form>";
 
 					
-					if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['ville']) && isset($_POST['type'])) {
+					if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['photo']) && isset($_POST['ville']) && isset($_POST['type'])) {
 						$new = ORM::for_table('boutique')->create();
 						$new->nom_boutique=$_POST['title'];
 						$new->adresse_boutique=$_POST['content'];
 						$new->ville_boutique=$_POST['ville'];
 						$new->type_boutique=$_POST['type'];
+						$new->photo_boutique=$_POST['photo'];
 						$new->save();
 					}
 					break;
 
 				case 'commercant':
-					echo "<form method='POST' action='./admin'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><table><tr><td>Nom: </td><td><input type='text' name='title'></td></tr><tr><td>Prénom: </td><td><input type='text' name='content'></td></tr><tr><td>Photo: </td><td><input type='text' name='picture'></td></tr><tr><td>Boutique: </td><td><select name='id_boutique'>";
+					echo "<form method='POST' action='./admin'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><table><tr><td>Nom: </td><td><input type='text' name='title'></td></tr><tr><td>Prénom: </td><td><input type='text' name='content'></td></tr><tr><td>Photo: </td><td><input type='text' name='picture' value='./Medias/Commercants/exemple.png'></td></tr><tr><td>Boutique: </td><td><select name='id_boutique'>";
 					foreach ($boutiques as $boutique) {
 						echo "<option value='".$boutique->id."'>".$boutique->nom_boutique."</option>";
 					}
@@ -130,6 +131,7 @@
 						echo "<tr><td>Nom : </td><td>".$new->nom_boutique."</td></tr>";
 						echo "<tr><td>Adresse : </td><td>".$new->adresse_boutique."</td></tr>";
 						echo "<tr><td>Ville : </td><td>".$new->ville_boutique."</td></tr>";
+						echo "<tr><td>Lien photo : </td><td>".$new->photo_boutique."</td></tr>";
 						echo "<tr><td>Type : </td><td>".$new->type_boutique."</td></tr></table>";
 
 						echo "<form method='POST' action='./admin'><input type='hidden' name='id' value='".$_POST['id']."'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><input type='hidden' name='test'>";
@@ -138,16 +140,18 @@
 						echo "<tr><td>Nom : </td><td><input type='text' name='title' value='".$new->nom_boutique."'></td></tr>";
 						echo "<tr><td>Adresse : </td><td><textarea rows='10' name='content'>".$new->adresse_boutique."</textarea></td></tr>";
 						echo "<tr><td>Ville : </td><td><input type='text' name='ville' value='".$new->ville_boutique."'></td></tr>";
+						echo "<tr><td>Lien photo : </td><td><input type='text' name='photo' value='".$new->photo_boutique."'></td></tr>";
 						echo "<tr><td>Type : </td><td><input type='text' name='type' value='".$new->type_boutique."'></td></tr>";
 						
 						echo "<tr><td><input type='submit' value='Modifier'></td></tr></table>";
 						echo "</form>";	
 
-						if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['ville']) && isset($_POST['type']) ) {
+						if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['photo']) && isset($_POST['ville']) && isset($_POST['type']) ) {
 							$new->nom_boutique=$_POST['title'];
 							$new->adresse_boutique=$_POST['content'];
 							$new->ville_boutique=$_POST['ville'];
 							$new->type_boutique=$_POST['type'];
+							$new->photo_boutique=$_POST['photo'];
 							$new->save();
 						}
 
@@ -162,6 +166,7 @@
 						echo "<tr><td>Adresse : </td><td>".$boutique->adresse_boutique."</td></tr>";
 						echo "<tr><td>Ville : </td><td>".$boutique->ville_boutique."</td></tr>";
 						echo "<tr><td>Type : </td><td>".$boutique->type_boutique."</td></tr>";
+						echo "<tr><td>Lien photo : </td><td>".$boutique->photo_boutique."</td></tr>";
 						echo "<tr><td><input type='submit' value='Sélectionner'></td></tr></table>";
 						echo "</form>";	
 						}
