@@ -204,7 +204,7 @@
 
 					}else{
 						echo "<form method='POST' action='./admin'><input type='hidden' name='test'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'>";
-						echo "<select name='id'";
+						echo "<select name='id'>";
 						foreach ($commercants as $commercant) {
 							echo "<option value='".$commercant->id."'>".$commercant->nom_comm." ".$commercant->prenom_comm."</option>";
 						}

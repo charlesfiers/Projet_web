@@ -49,15 +49,13 @@
 <div class="grid grid-pad">
 	<?php $n=0;?>
 	<?php foreach ($commercants as $commercant): ?>
-
-			<img src="<?php echo $commercant->devanture ?>" id="ancre_<?php $n++;echo $n;?>">
-			<div class="commercant_info">
-				<h4><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>
-				<h5><?php 
-				$id=$commercant->id_boutique;
-				$bout = ORM::for_table('boutique')->find_one($id);
-				echo $bout->type_boutique;
-				?></h5>
+		<div class="commercant_info">
+			<?php $id=$commercant->id_boutique;
+				$bout = ORM::for_table('boutique')->find_one($id); ?>
+			<h4 id="ancre_<?php $n++;echo $n;?>"><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>
+			<img src="<?php echo $bout->photo_boutique ?>">
+			<h5><?php echo $bout->type_boutique; ?></h5>
+				<?php echo "Nom : ".$bout->nom_boutique ?> </br>
 				<?php echo "Adresse : ".$bout->adresse_boutique ?> </br>
           		<?php echo "Ville : ".$bout->ville_boutique ?>
 			</div>
