@@ -1,5 +1,12 @@
-<?php echo "Vous êtes connecté en tant que ".$admin->loginUser;
-?>
+</br>
+<?php if (!isset($admin)) :?>
+	<?php
+	echo "Vous n'êtes pas connecté, vous allez être redirigé vers la page de connexion.";
+	$URL=BASE_URI."login";
+	header("refresh:5;url= $URL");?>
+<?php else: ?>
+	<?php echo "Vous êtes connecté en tant que ".$admin->loginUser;?>
+
 </br>
 <form method="post" action="./admin">
 <select name="action">
@@ -67,8 +74,6 @@
 
 				case 'news':
 					echo "<form method='POST' action='./admin'><input type='hidden' name='objet' value='".$_POST['objet']."'><input type='hidden' name='action' value='".$_POST['action']."'><table><tr><td>Titre: </td><td><input type='text' name='title'></td></tr><tr><td>Contenu: </td><td><textarea rows='20' name='content'></textarea></td></tr><tr><td>Description: </td><td><textarea rows='4' name='description'></textarea></td></tr><tr><td>Lien image: </td><td><input type='text' name='picture'></td></tr><tr><td>Légende: </td><td><textarea rows='4' name='legend'></textarea></td></tr><tr><td><input type='submit' value='Enregistrer'></td></tr></table></form>";
-
-					
 					if (isset($_POST['title']) && isset($_POST['content']) && isset($_POST['description']) && isset($_POST['picture']) && isset($_POST['legend'])) {
 						$new = ORM::for_table('article')->create();
 						$new->titre=$_POST['title'];
@@ -378,4 +383,5 @@
 <?php if (isset($_POST['objet']) && isset($_POST['action'])) :?>
 	N'hésitez pas à refresh pour mettre à jour la base de donnée.
 	<form method="POST" action="./admin"><input type='hidden' name='objet' value="<?php echo $_POST['objet'];?>"><input type='hidden' name='action' value="<?php echo $_POST['action'];?>"><input type="submit" value="Refresh"></form>
+<?php endif;?>
 <?php endif;?>
