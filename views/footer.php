@@ -25,11 +25,6 @@
 		text[2] = 'Poissonerie';
 		text[3] = 'Boulangerie';
 
-	lien = new Array()
-		lien[0] = '<?php echo BASE_URI; ?>commercants#ancre_1';
-		lien[1] = '<?php echo BASE_URI; ?>commercants#ancre_2';
-		lien[2] = '<?php echo BASE_URI; ?>commercants#ancre_3';
-		lien[3] = '<?php echo BASE_URI; ?>commercants#ancre_4';
 		
 		longueur = pictures.length-1;
 
@@ -120,7 +115,7 @@
 		};		
 
 		code_html3 = '<div class="titre_princ">'+text[cliq.chiffre]+'</div>';
-		code_html4 = '<a href="'+lien[cliq.chiffre]+'"><div class="savoir">En savoir plus...</div></a>';
+		code_html4 = '<a href="'+text[cliq.chiffre]+'"><div class="savoir">En savoir plus...</div></a>';
 		document.getElementById("bandeau").innerHTML = code_html3+code_html4;
 		document.getElementById("fond").innerHTML = code_html2;
 		document.getElementById("banniere").innerHTML = code_html;

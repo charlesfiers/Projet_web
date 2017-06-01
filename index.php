@@ -42,6 +42,7 @@ function commercants(){
 					'animback' => 'backfixe',
 					'position' => 'Commercants',));
 }
+
 function login(){
 	Flight::render('login',NULL);
 }
@@ -89,6 +90,16 @@ function admin(){
 					'position' => 'Admin', ));
 }
 
+function boucherie(){
+	$boutiques = Model::factory('Boutique')->where('type_boutique','Boucherie')->find_many();
+	$id = Model::factory('Boutique')->select('id')->where('type_boutique','Boucherie')->find_many();
+	Flight::render('commercants',array('commercants' => $commercants, 'boutiques'=> $boutiques),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Boucherie - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
 Flight::route('/', 'hello');
 Flight::route('/actualites', 'actualites');
 Flight::route('/commercants','commercants');
@@ -99,5 +110,6 @@ Flight::route('/login','login');
 Flight::route('/check','check');
 Flight::route('/logout','logout');
 Flight::route('/admin','admin');
+Flight::route('/Boucherie','boucherie');
 
 Flight::start();
