@@ -3,8 +3,7 @@
 <?php 
 session_start();
 
-
-define('BASE_URI', 'http://localhost/Projet/Projet_web/'); // attention ne correspond qu'à la machine locale
+include 'config.php'; //fichier à configurer et à mettre dans le .gitignore
 
 
 require_once 'libs/idiorm.php';
