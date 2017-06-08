@@ -11,7 +11,7 @@ html,body,main{
 /* --- CSS DU BODY --- */
 
 body{
-	background-image: url("./Medias/background.jpg");
+	background-image: url("./Medias/samplebackground.jpg");
 	position: relative;
 	z-index: 3;	
 }
