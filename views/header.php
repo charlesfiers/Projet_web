@@ -3,7 +3,7 @@
 <header <?php echo 'id="'.$animback.'"';?> class="blockheader">
     <div class="grid grid-pad">
         <div class="col-1-12">
-         <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
+            <a href="<?php echo BASE_URI; ?>."><img src="Medias/logoHaF.png" id="logo">
         </div>
         <div class="col-10-12">
             <nav id="menu" class="menu">

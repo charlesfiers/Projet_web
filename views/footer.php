@@ -2,7 +2,8 @@
 
 <footer>
  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">   
-<div id="f_g" onclick="clique2(position)"></div><div id="f_d" onclick="clique3(position)"></div>
+<div id="f_g" onclick="clique2(position)"></div>
+<div id="f_d" onclick="clique3(position)"></div>
 <div id="bandeau"></div>
 <div id="fond"></div>
 <div id="banniere"></div>

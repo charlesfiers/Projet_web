@@ -1,4 +1,3 @@
-</br>
 <?php if (!isset($admin)) :?>
 	<?php
 	echo "Vous n'êtes pas connecté, vous allez être redirigé vers la page de connexion.";
@@ -9,17 +8,17 @@
 
 </br>
 <form method="post" action="./admin">
-<select name="action">
-  <option value="create" <?php if (isset($_POST['action']) && $_POST['action']=='create'){echo " selected";}?>>Ajouter</option>
-  <option value="modify" <?php if (isset($_POST['action']) && $_POST['action']=='modify'){echo " selected";}?>>Modifier</option>
-  <option value="delete" <?php if (isset($_POST['action']) && $_POST['action']=='delete'){echo " selected";}?>>Supprimer</option>
-</select>
-<select name="objet">
-  <option value="info" <?php if (isset($_POST['objet']) && $_POST['objet']=='info'){echo " selected";}?>>information</option>
-  <option value="boutique" <?php if (isset($_POST['objet']) && $_POST['objet']=='boutique'){echo " selected";}?>>boutique</option>
-  <option value="commercant" <?php if (isset($_POST['objet']) && $_POST['objet']=='commercant'){echo " selected";}?>>commerçant</option>
-  <option value="news" <?php if (isset($_POST['objet']) && $_POST['objet']=='news'){echo " selected";}?>>article</option>
-</select>
+	<select name="action">
+  		<option value="create" <?php if (isset($_POST['action']) && $_POST['action']=='create'){echo " selected";}?>>Ajouter</option>
+  		<option value="modify" <?php if (isset($_POST['action']) && $_POST['action']=='modify'){echo " selected";}?>>Modifier</option>
+  		<option value="delete" <?php if (isset($_POST['action']) && $_POST['action']=='delete'){echo " selected";}?>>Supprimer</option>
+	</select>
+	<select name="objet">
+  		<option value="info" <?php if (isset($_POST['objet']) && $_POST['objet']=='info'){echo " selected";}?>>information</option>
+  		<option value="boutique" <?php if (isset($_POST['objet']) && $_POST['objet']=='boutique'){echo " selected";}?>>boutique</option>
+  		<option value="commercant" <?php if (isset($_POST['objet']) && $_POST['objet']=='commercant'){echo " selected";}?>>commerçant</option>
+  		<option value="news" <?php if (isset($_POST['objet']) && $_POST['objet']=='news'){echo " selected";}?>>article</option>
+	</select>
 <input type="submit" value="GO">
 </form>
 <?php if((isset($_POST['action']) && isset($_POST['objet'])) || (isset($_POST['title']) && isset($_POST['content']))){
