@@ -1,36 +1,37 @@
-<div class="grid grid-pad" id="menu_commercants">
-	<?php $m=0;?>
-	<?php foreach ($commercants as $commercant): ?>
-			<div class="col-4">
-				<div class="bulles">
-					<a href="#ancre_<?php $m++;echo $m;?>">
-					<img src="<?php echo $commercant->photo ?>" class="commercant_pic">
-					<div class="commercant_desc">
-						<h4><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>
-						<h5><?php
-						$id=$commercant->id_boutique;
-						$bout = ORM::for_table('boutique')->find_one($id);
-						echo $bout->type_boutique;?>
-						</h5>
+<?php $n=0;?>
+<?php foreach ($paragraphe as $paragraphe): ?>
+	<?php 
+	$bout = Model::factory('Boutique')->where('type_boutique',$paragraphe->type_boutique)->find_many();
+	foreach ($bout as $bout) {
+		$bulles = Model::factory('Commercant')->where('id_boutique',$bout->id)->find_many();
+	}
+	?>
+	
+	<div class="grid grid-pad">
+		<div class="col-1-1">
+			<h2 id="ancre_<?php echo $n;$n++;?>"><?php echo $paragraphe->type_boutique ?></h2>
+			<?php foreach ($bulles as $bulle): ?>
+				<div class="col-4">
+					<div class="bulles">
+						<img src="<?php echo $bulle->photo ?>" class="commercant_pic">
+						<div class="commercant_desc">
+						<h4><?php echo $bulle->nom_comm." ".$bulle->prenom_comm?></h4>
 					</div>
-					</a>
+					</div>
 				</div>
-			</div>
-	<?php endforeach ?>
-</div>
-
-<div class="grid grid-pad">
-	<?php $n=0;?>
-	<?php foreach ($commercants as $commercant): ?>
+			<?php endforeach ?>
+		</div>
+	</div>
+	<div class="grid grid-pad">
+	<?php foreach ($bout as $bout): ?>
 		<div class="commercant_info">
-			<?php $id=$commercant->id_boutique;
-			$bout = ORM::for_table('boutique')->find_one($id); ?>
-			<h4 id="ancre_<?php $n++;echo $n;?>"><?php echo $commercant->nom_comm." ".$commercant->prenom_comm?></h4>
-			<img src="<?php echo $bout->photo_boutique ?>">
-			<h5><?php echo $bout->type_boutique; ?></h5>
+			<img src="<?php echo $bout->photo_boutique ?>"></br>
+			
 			<?php echo "Nom : ".$bout->nom_boutique ?> </br>
 			<?php echo "Adresse : ".$bout->adresse_boutique ?> </br>
           	<?php echo "Ville : ".$bout->ville_boutique ?>
 		</div>
 	<?php endforeach ?>
 </div>
+<?php endforeach ?>
+

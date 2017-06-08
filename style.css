@@ -5,7 +5,6 @@ a{
 
 html,body,main{
 	height:100%;
-	overflow: hidden;
 }
 
 /* --- CSS DU BODY --- */
@@ -269,7 +268,7 @@ footer {
 	color: white;
 	position: absolute;
 	top: 100%;
-	left: 42.2%;
+	left: 39.7%;
 	text-shadow: 1pt 1pt 2pt black;
 	background-color: #1c171d;
 	padding: 5px;

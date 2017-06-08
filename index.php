@@ -34,9 +34,8 @@ function actualites(){
 }
 //Création de commercants
 function commercants(){
-	$commercants = Model::factory('Commercant')->find_many();
-	$boutiques = Model::factory('Boutique')->find_many();
-	Flight::render('commercants',array('commercants' => $commercants, 'boutiques'=> $boutiques),'main_content');
+	$paragraphe = Model::factory('Boutique')->distinct()->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
 	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Commerçants - Halles au Frais</title>',
 					'animback' => 'backfixe',
@@ -91,11 +90,55 @@ function admin(){
 }
 
 function boucherie(){
-	$boutiques = Model::factory('Boutique')->where('type_boutique','Boucherie')->find_many();
-	$id = Model::factory('Boutique')->select('id')->where('type_boutique','Boucherie')->find_many();
-	Flight::render('commercants',array('commercants' => $commercants, 'boutiques'=> $boutiques),'main_content');
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Boucherie')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
 	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
 					'title' => '<title>Boucherie - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
+function boulangerie(){
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Boulangerie')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Boulangerie - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
+function poissonnerie(){
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Poissonnerie')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Poissonnerie - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
+function primeur(){
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Primeur')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Primeur - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
+function caviste(){
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Caviste')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Caviste - Halles au Frais</title>',
+					'animback' => 'backfixe',
+					'position' => 'Commercants',));
+}
+
+function traiteur(){
+	$paragraphe = Model::factory('Boutique')->where('type_boutique','Traiteur')->select('type_boutique')->find_many();
+	Flight::render('commercants',array('paragraphe' => $paragraphe),'main_content');
+	Flight::render('base',array('icon' => '<link rel="icon" type="image/png" href="Medias/logoHaF.png" />',
+					'title' => '<title>Traiteur - Halles au Frais</title>',
 					'animback' => 'backfixe',
 					'position' => 'Commercants',));
 }
@@ -111,5 +154,10 @@ Flight::route('/check','check');
 Flight::route('/logout','logout');
 Flight::route('/admin','admin');
 Flight::route('/Boucherie','boucherie');
+Flight::route('/Boulangerie','boulangerie');
+Flight::route('/Poissonnerie','poissonnerie');
+Flight::route('/Primeur','primeur');
+Flight::route('/Caviste','caviste');
+Flight::route('/Traiteur','traiteur');
 
 Flight::start();

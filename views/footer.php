@@ -23,7 +23,7 @@
 	text = new Array()
 		text[0] = 'Boucherie';
 		text[1] = 'Primeur';
-		text[2] = 'Poissonerie';
+		text[2] = 'Poissonnerie';
 		text[3] = 'Boulangerie';
 
 		
