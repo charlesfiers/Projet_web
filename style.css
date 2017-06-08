@@ -368,3 +368,57 @@ footer {
 input:hover{
 	box-shadow: 0pt 0pt 1pt 0pt blue;
 }
+
+
+/* --- MEDIA QUERIES ---*/
+
+
+@media (max-width: 750px) {
+#logo{
+	width:3em;
+}
+#menu ul{
+	list-style-type: none;
+	text-align: center;
+	margin:0;
+	padding: 0;
+	padding-top: 0px;
+
+}
+
+#menu ul li{
+	display: inline;
+    width: 20px;
+   	padding: 0;
+
+}
+.blockheader #bouton{
+	width: 6%;
+}
+#bandeau{
+	width: 100%;
+	height: 30%;
+	top: 24%;
+
+}
+
+
+.mini{
+	height: 2em;
+	margin-right: 3px;
+	margin-left: 3px;
+
+}
+
+.maxi{
+	height: 3em;
+	margin-right: 6px;
+	margin-left: 6px;
+
+}
+
+
+}
+@media (max-width: 480px){
+
+}
