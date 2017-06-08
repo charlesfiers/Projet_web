@@ -9,6 +9,7 @@ include 'config.php'; //fichier à configurer et à mettre dans le .gitignore
 require_once 'libs/idiorm.php';
 require_once 'libs/paris.php';
 require_once 'models/class.php';
+
 ORM::configure('sqlite:Data/bidon.sqlite');
 
 require 'libs/flight/flight/Flight.php';
