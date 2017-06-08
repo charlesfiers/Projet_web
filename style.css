@@ -5,6 +5,7 @@ a{
 
 html,body,main{
 	height:100%;
+	overflow: hidden;
 }
 
 /* --- CSS DU BODY --- */
@@ -262,13 +263,17 @@ footer {
 	font-family: 'Poiret One', cursive;
 	z-index: 6;
 	width: auto;
-	font-size: 2.5em;
+	font-size: 2.3em;
 	display: inline-block;
 	border: 2px solid white;
 	color: white;
-	position: relative;
-	top: 20%;
+	position: absolute;
+	top: 100%;
+	left: 42.2%;
 	text-shadow: 1pt 1pt 2pt black;
+	background-color: #1c171d;
+	padding: 5px;
+	opacity: 0.92;
 }
 
 #bandeau .savoir:hover{
