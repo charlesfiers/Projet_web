@@ -1,13 +1,13 @@
 /* --- CSS LOG -- */
 
 body{
-	background-image: url("./Medias/background.jpg");
+	background-image: url("./Medias/samplebackground.jpg");
 }
 
 .menu_login{
 	background-color: white;
 	text-align: center;
-	height: 100%;
+	/*height: 100%;*/
 	border: 2pt solid blue;
 	border-radius: 10pt;
 	width: auto;

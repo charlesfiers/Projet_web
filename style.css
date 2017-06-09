@@ -7,6 +7,7 @@ html,body,main{
 	height:100%;
 }
 
+
 /* --- CSS DU BODY --- */
 
 body{
@@ -51,6 +52,7 @@ article .contenu{
 header .grid{
 	padding-bottom: 15px;
 }
+
 
 /* --- CSS DU BACKGROUND DU HEADER --- */
 
@@ -416,8 +418,35 @@ input:hover{
 	margin-left: 6px;
 
 }
+#f_g{
 
+	border-width:2em 1em 2em 0px;
 
+}
+
+#f_d{
+
+	border-width:2em 0px 2em 1em;
+
+}
+#bandeau .titre_princ{
+
+	font-size: 350%;
+}
+#bandeau .savoir{
+	width: auto;
+	font-size: 1em;
+	display: inline-block;
+	border: 2px solid white;
+	color: white;
+	position: absolute;
+	top: 100%;
+	left: 39.7%;
+	text-shadow: 1pt 1pt 2pt black;
+	background-color: #1c171d;
+	padding: 3px;
+	opacity: 0.92;
+}
 }
 @media (max-width: 480px){
 

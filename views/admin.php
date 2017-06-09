@@ -20,6 +20,7 @@
   		<option value="news" <?php if (isset($_POST['objet']) && $_POST['objet']=='news'){echo " selected";}?>>article</option>
 	</select>
 <input type="submit" value="GO">
+<a href="./logout"><input type="button" value="Se déconnecter"/></a>
 </form>
 <?php if((isset($_POST['action']) && isset($_POST['objet'])) || (isset($_POST['title']) && isset($_POST['content']))){
 	switch ($_POST['action']) {
